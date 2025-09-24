@@ -1,6 +1,7 @@
 # BaseController Implementation Checklist
 
 ## Abstract Class Setup
+
 - [ ] BaseController abstract class created in `shared/core/`
 - [ ] Generic type parameter `<T>` properly defined
 - [ ] Database client abstraction implemented
@@ -8,6 +9,7 @@
 - [ ] Constructor properly initializes dependencies
 
 ## CRUD Operations Implementation
+
 - [ ] `getAll` method implemented with pagination
 - [ ] `getById` method implemented with proper error handling
 - [ ] `create` method implemented with validation
@@ -16,6 +18,7 @@
 - [ ] All methods return proper HTTP responses
 
 ## Search & Filtering
+
 - [ ] Abstract `buildSearchFilter` method defined
 - [ ] Search parameter extraction implemented
 - [ ] Database-agnostic filter pattern established
@@ -24,6 +27,7 @@
 - [ ] Search performance considered
 
 ## Validation & Schema Integration
+
 - [ ] Zod schema validation on all inputs
 - [ ] Create schema validation implemented
 - [ ] Update schema validation implemented
@@ -32,6 +36,7 @@
 - [ ] Validation error messages are user-friendly
 
 ## Error Handling
+
 - [ ] Consistent error response format
 - [ ] HTTP status codes properly used
 - [ ] Validation errors properly formatted
@@ -40,6 +45,7 @@
 - [ ] Error messages don't expose sensitive data
 
 ## Database Abstraction
+
 - [ ] Database client interface defined
 - [ ] Connection management abstracted
 - [ ] Database-specific operations isolated
@@ -48,6 +54,7 @@
 - [ ] Connection pooling handled
 
 ## Response Formatting
+
 - [ ] Consistent API response structure
 - [ ] Success responses properly formatted
 - [ ] Error responses standardized
@@ -56,6 +63,7 @@
 - [ ] Content-Type headers set correctly
 
 ## Feature Controller Extension
+
 - [ ] Feature controller extends BaseController
 - [ ] Entity-specific `buildSearchFilter` implemented
 - [ ] Custom business logic methods added
@@ -64,6 +72,7 @@
 - [ ] Controller singleton pattern implemented (if needed)
 
 ## Type Safety
+
 - [ ] Generic types properly constrained
 - [ ] Entity model interfaces defined
 - [ ] API response types defined
@@ -72,6 +81,7 @@
 - [ ] Return types explicitly defined
 
 ## Performance Optimization
+
 - [ ] Database queries optimized
 - [ ] Proper indexing strategy planned
 - [ ] Pagination limits enforced
@@ -80,6 +90,7 @@
 - [ ] Database connection reuse implemented
 
 ## Testing
+
 - [ ] Unit tests for BaseController methods
 - [ ] Mock database client created
 - [ ] Test data fixtures defined
@@ -88,6 +99,7 @@
 - [ ] Performance tests implemented
 
 ## Documentation
+
 - [ ] BaseController usage documented
 - [ ] Extension patterns documented
 - [ ] Database integration examples provided
@@ -96,6 +108,7 @@
 - [ ] Performance considerations documented
 
 ## Logging & Monitoring
+
 - [ ] Request/response logging implemented
 - [ ] Error logging with stack traces
 - [ ] Performance metrics captured
@@ -104,6 +117,7 @@
 - [ ] Audit trail for data changes
 
 ## Security Considerations
+
 - [ ] Input sanitization implemented
 - [ ] SQL injection prevention (for SQL databases)
 - [ ] NoSQL injection prevention (for NoSQL databases)
@@ -112,7 +126,9 @@
 - [ ] Sensitive data handling
 
 ## Database-Specific Implementations
+
 ### For SQL Databases (Prisma/TypeORM)
+
 - [ ] Proper WHERE clause generation
 - [ ] JOIN operations handled
 - [ ] Transaction support implemented
@@ -120,6 +136,7 @@
 - [ ] Relationship loading optimized
 
 ### For MongoDB (Mongoose)
+
 - [ ] Query object generation
 - [ ] Aggregation pipeline support
 - [ ] Index utilization optimized
@@ -127,6 +144,7 @@
 - [ ] Connection string security
 
 ### For Serverless Databases
+
 - [ ] Connection pooling optimized
 - [ ] Cold start mitigation
 - [ ] Query timeout handling
@@ -134,6 +152,7 @@
 - [ ] Cost optimization considered
 
 ## Integration Points
+
 - [ ] Authentication middleware integration
 - [ ] Authorization checks implemented
 - [ ] Audit logging integrated
@@ -142,6 +161,7 @@
 - [ ] External API integration patterns
 
 ## Production Readiness
+
 - [ ] Environment variable configuration
 - [ ] Production database connection
 - [ ] Error monitoring integration

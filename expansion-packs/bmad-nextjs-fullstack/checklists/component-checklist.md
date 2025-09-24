@@ -1,12 +1,14 @@
 # React Component Development Checklist
 
 ## Pre-Development
+
 - [ ] Component purpose and requirements clearly defined
 - [ ] Component interface (props) designed
 - [ ] Accessibility requirements identified
 - [ ] Design mockup/wireframe available
 
 ## Development
+
 - [ ] TypeScript interface defined for all props
 - [ ] Component follows naming conventions (PascalCase)
 - [ ] Proper file structure and organization
@@ -14,6 +16,7 @@
 - [ ] Error boundaries implemented for critical components
 
 ## Styling
+
 - [ ] Tailwind CSS classes used consistently
 - [ ] Responsive design implemented
 - [ ] Dark mode support (if applicable)
@@ -21,6 +24,7 @@
 - [ ] CSS class conflicts avoided
 
 ## Accessibility (a11y)
+
 - [ ] Semantic HTML elements used
 - [ ] ARIA labels added where needed
 - [ ] Keyboard navigation supported
@@ -29,6 +33,7 @@
 - [ ] Color contrast meets WCAG guidelines
 
 ## Performance
+
 - [ ] Unnecessary re-renders avoided
 - [ ] React.memo used where appropriate
 - [ ] Heavy computations memoized with useMemo
@@ -36,6 +41,7 @@
 - [ ] Large lists virtualized (if applicable)
 
 ## Testing
+
 - [ ] Unit tests written and passing
 - [ ] Component renders without crashing
 - [ ] Props validation tested
@@ -44,6 +50,7 @@
 - [ ] Accessibility testing performed
 
 ## Code Quality
+
 - [ ] TypeScript types are strict and accurate
 - [ ] ESLint rules pass
 - [ ] Prettier formatting applied
@@ -52,6 +59,7 @@
 - [ ] Comments added for complex logic
 
 ## Integration
+
 - [ ] Component integrates well with parent components
 - [ ] State management working correctly
 - [ ] API calls handled properly (if applicable)
@@ -59,12 +67,14 @@
 - [ ] Loading states implemented
 
 ## Documentation
+
 - [ ] Component documented with JSDoc comments
 - [ ] Props interface documented
 - [ ] Usage examples provided
 - [ ] Storybook story created (if using Storybook)
 
 ## Review
+
 - [ ] Code review completed
 - [ ] Design review completed
 - [ ] Performance review completed

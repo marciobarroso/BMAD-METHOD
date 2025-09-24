@@ -9,6 +9,7 @@ This extension pack provides everything needed to build enterprise-grade Next.js
 ## ✨ Features
 
 ### 🤖 Specialized AI Agents
+
 - **Domain Architect** - Business domain modeling and bounded context definition
 - **Next.js Architect** - Feature-Based Architecture and App Router patterns
 - **BaseController Specialist** - Database-agnostic controller patterns and schema-first design
@@ -23,6 +24,7 @@ This extension pack provides everything needed to build enterprise-grade Next.js
 - **Security Auditor** - Security best practices for modern web applications
 
 ### 🔄 Domain-Driven Workflows
+
 - **Feature-Based Project Setup** - Initialize project from `nextjs-new-app` template
 - **Domain Feature Development** - Complete business domain implementation
 - **BaseController Implementation** - Database-agnostic controller setup
@@ -32,6 +34,7 @@ This extension pack provides everything needed to build enterprise-grade Next.js
 - **Deployment Pipeline** - Production deployment with Feature-Based Architecture
 
 ### 📝 Architecture Templates
+
 - Feature Structure Template (Complete feature organization)
 - BaseController Extension Template (Database-agnostic controller)
 - Schema-First Entity Template (Zod validation + TypeScript types)
@@ -40,6 +43,7 @@ This extension pack provides everything needed to build enterprise-grade Next.js
 - Custom Hooks Template (Data fetching patterns)
 
 ### ✅ Architecture Checklists
+
 - Feature-Based Architecture Development Checklist
 - BaseController Implementation Checklist
 - Domain-Driven Design Checklist
@@ -49,7 +53,9 @@ This extension pack provides everything needed to build enterprise-grade Next.js
 ## 🚀 Quick Start
 
 ### Template Base
+
 This extension pack is designed to work with the `nextjs-new-app` template:
+
 ```bash
 # Clone the base template
 git clone https://github.com/marciobarroso/nextjs-new-app.git my-project
@@ -60,6 +66,7 @@ pnpm install # or npm install
 ```
 
 ### Extension Pack Usage
+
 ```bash
 # Use BMAD Method with this extension pack
 bmad-fba create-feature "user-management"
@@ -88,12 +95,14 @@ This extension pack implements Feature-Based Architecture with Domain-Driven Des
 ## 📚 Documentation
 
 ### Core Concepts
+
 - [Project Structure](docs/project-structure.md)
 - [Component Patterns](docs/component-patterns.md)
 - [API Design](docs/api-design.md)
 - [State Management](docs/state-management.md)
 
 ### Guides
+
 - [Getting Started](docs/getting-started.md)
 - [Development Workflow](docs/development-workflow.md)
 - [Testing Strategy](docs/testing-strategy.md)
@@ -102,6 +111,7 @@ This extension pack implements Feature-Based Architecture with Domain-Driven Des
 ## 🛠️ Technology Stack
 
 ### Core Technologies (from nextjs-new-app template)
+
 - **Next.js 15.5.3** - React framework with App Router
 - **React 19.1.0** - Latest React with modern features
 - **TypeScript 5** - Strict type safety
@@ -110,12 +120,14 @@ This extension pack implements Feature-Based Architecture with Domain-Driven Des
 - **pnpm** - Efficient package management
 
 ### Development Tools (pre-configured)
+
 - **ESLint 9** - Code linting with Next.js integration
 - **Prettier 3.6.2** - Code formatting with import sorting
 - **Husky 9.1.7** - Git hooks for code quality
 - **Jest** - Testing framework (configured, ready for implementation)
 
 ### Feature-Based Architecture Additions
+
 - **Zod** - Schema validation and type generation
 - **BaseController Pattern** - Database-agnostic CRUD operations
 - **Domain-Driven Design** - Business domain organization
@@ -124,6 +136,7 @@ This extension pack implements Feature-Based Architecture with Domain-Driven Des
 ## 🎯 Best Practices
 
 ### Code Quality
+
 - Strict TypeScript configuration
 - Comprehensive ESLint rules
 - Automatic code formatting with Prettier
@@ -131,6 +144,7 @@ This extension pack implements Feature-Based Architecture with Domain-Driven Des
 - API-first design approach
 
 ### Performance
+
 - Server Components by default
 - Client Components only when needed
 - Image optimization with Next.js Image
@@ -138,6 +152,7 @@ This extension pack implements Feature-Based Architecture with Domain-Driven Des
 - Core Web Vitals monitoring
 
 ### Security
+
 - Input validation with Zod
 - CSRF protection
 - Secure headers middleware
@@ -194,7 +209,8 @@ This extension pack is part of the BMAD Method project and follows the same MIT 
 
 **Current Version:** 1.0.0
 
-**Compatibility:** 
+**Compatibility:**
+
 - Next.js 14+
 - Node.js 18+
 - TypeScript 5+

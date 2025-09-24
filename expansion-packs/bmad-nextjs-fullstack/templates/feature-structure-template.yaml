@@ -5,7 +5,7 @@ version: 1.0.0
 
 template: |
   # Feature Structure for ({featureName})
-  
+
   ## Directory Structure
   ```
   app/(features)/({featureName})/
@@ -109,7 +109,7 @@ template: |
   ### Feature Component ({EntityName}List.tsx)
   ```typescript
   'use client'
-  
+
   import { use{Entities} } from '../hooks/use{Entities}'
   import { {EntityName}Card } from './{entityName}-card'
   import { useEffect } from 'react'

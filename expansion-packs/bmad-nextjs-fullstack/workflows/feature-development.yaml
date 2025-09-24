@@ -53,4 +53,5 @@ tasks:
       - name: documentation
         description: Feature documentation and usage examples
 
-agents: [nextjs-architect, typescript-specialist, tailwind-designer, api-developer, testing-engineer]
+agents:
+  [nextjs-architect, typescript-specialist, tailwind-designer, api-developer, testing-engineer]

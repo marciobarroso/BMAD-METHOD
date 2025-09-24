@@ -106,7 +106,7 @@ variables:
     required: true
   - name: schemaFields
     type: textarea
-    description: Zod schema fields definition (e.g., name: z.string().min(2), email: z.string().email())
+    description: "Zod schema fields definition (e.g., name: z.string().min(2), email: z.string().email())"
     required: true
   - name: sortFields
     type: string

@@ -1,6 +1,7 @@
 # Feature-Based Architecture Development Checklist
 
 ## Domain Analysis & Planning
+
 - [ ] Business domain clearly identified and defined
 - [ ] Bounded context boundaries established
 - [ ] Domain entities and relationships mapped
@@ -9,6 +10,7 @@
 - [ ] Business requirements thoroughly documented
 
 ## Project Structure
+
 - [ ] Feature organized in `(features)/({feature-name})/` route group
 - [ ] API layer structured in `api/{entity-name}/` directory
 - [ ] Components organized in `components/` directory within feature
@@ -17,6 +19,7 @@
 - [ ] Feature pages organized in appropriate subdirectories
 
 ## Schema-First Development
+
 - [ ] Zod schema defined for entity validation
 - [ ] TypeScript interfaces derived from Zod schemas
 - [ ] Create, Update, and Search schemas properly defined
@@ -25,6 +28,7 @@
 - [ ] Schema validation covers all business rules
 
 ## BaseController Implementation
+
 - [ ] Entity controller extends BaseController abstract class
 - [ ] Database-agnostic design maintained
 - [ ] `buildSearchFilter` method implemented for entity-specific search
@@ -33,6 +37,7 @@
 - [ ] Controller uses Zod schema for validation
 
 ## API Routes Development
+
 - [ ] Collection routes (`/api/{entity}`) implemented
 - [ ] Individual entity routes (`/api/{entity}/[id]`) implemented
 - [ ] HTTP methods properly implemented (GET, POST, PUT, DELETE)
@@ -41,6 +46,7 @@
 - [ ] Database connection properly managed
 
 ## Custom Hooks Implementation
+
 - [ ] Data fetching hooks follow naming convention (`use{Entities}`)
 - [ ] Mutation hooks follow naming convention (`use{Entity}Mutations`)
 - [ ] Single entity hooks follow naming convention (`use{Entity}`)
@@ -50,6 +56,7 @@
 - [ ] Search functionality integrated
 
 ## React Components
+
 - [ ] Components follow PascalCase naming convention
 - [ ] Form components implemented (`{Entity}Form`)
 - [ ] List components implemented (`{Entity}List`)
@@ -60,6 +67,7 @@
 - [ ] Components follow accessibility guidelines
 
 ## Next.js Pages
+
 - [ ] Feature index page implemented (`page.tsx`)
 - [ ] Entity detail pages implemented (`[id]/page.tsx`)
 - [ ] Create new entity page implemented (`new/page.tsx`)
@@ -69,6 +77,7 @@
 - [ ] Proper layouts and navigation implemented
 
 ## Type Safety
+
 - [ ] Strict TypeScript configuration enforced
 - [ ] No `any` types used
 - [ ] End-to-end type safety from database to UI
@@ -77,6 +86,7 @@
 - [ ] Generic types used appropriately
 
 ## Code Quality
+
 - [ ] ESLint rules passing without warnings
 - [ ] Prettier formatting applied consistently
 - [ ] No console statements in production code
@@ -85,6 +95,7 @@
 - [ ] Code follows established conventions
 
 ## Testing
+
 - [ ] Unit tests for controller logic
 - [ ] API route integration tests
 - [ ] React component tests
@@ -93,6 +104,7 @@
 - [ ] Test data and mocks properly implemented
 
 ## Database Integration
+
 - [ ] Database connection abstracted properly
 - [ ] ORM/ODM integration follows patterns
 - [ ] Migration strategy considered
@@ -101,6 +113,7 @@
 - [ ] Data relationships properly modeled
 
 ## Performance Considerations
+
 - [ ] Server Components used for data fetching
 - [ ] Client Components minimized
 - [ ] Database queries optimized
@@ -109,6 +122,7 @@
 - [ ] Bundle size impact assessed
 
 ## Security
+
 - [ ] Input validation on all API endpoints
 - [ ] Authentication/authorization considered
 - [ ] SQL injection prevention (if using SQL database)
@@ -117,6 +131,7 @@
 - [ ] Error messages don't leak sensitive information
 
 ## Documentation
+
 - [ ] Feature purpose and scope documented
 - [ ] API endpoints documented
 - [ ] Component usage examples provided
@@ -125,6 +140,7 @@
 - [ ] Database schema documented
 
 ## Integration & Dependencies
+
 - [ ] Shared infrastructure properly utilized
 - [ ] Cross-feature dependencies minimized
 - [ ] Integration points well-defined
@@ -133,6 +149,7 @@
 - [ ] Feature can be tested in isolation
 
 ## Deployment Readiness
+
 - [ ] Environment variables properly configured
 - [ ] Production build successful
 - [ ] Database migrations ready (if needed)
@@ -141,6 +158,7 @@
 - [ ] Health checks implemented
 
 ## Review & Quality Assurance
+
 - [ ] Code review completed
 - [ ] Architecture review completed
 - [ ] Business logic verified
