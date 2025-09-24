@@ -1,0 +1,69 @@
+# <!-- Powered by BMAD™ Core -->
+name: base-controller-implementation
+title: BaseController Pattern Implementation
+description: Workflow for implementing and extending BaseController patterns for domain entities
+version: 1.0.0
+
+tasks:
+  - name: entity-modeling
+    title: Entity Data Modeling
+    description: Define entity structure and database relationships
+    inputs:
+      - name: entity_name
+        type: text
+        required: true
+        description: Name of the entity (PascalCase, e.g., User, Product)
+      - name: entity_fields
+        type: textarea
+        required: true
+        description: Entity fields with types and validation rules
+      - name: database_type
+        type: select
+        options: [sql, mongodb, database-agnostic]
+        default: database-agnostic
+        description: Target database type for optimization
+    outputs:
+      - name: entity_model
+        description: Complete entity model with TypeScript interfaces
+
+  - name: schema-creation
+    title: Create Zod Validation Schema
+    description: Implement Zod schema for runtime validation
+    depends_on: [entity-modeling]
+    outputs:
+      - name: zod_schema
+        description: Comprehensive Zod validation schema
+
+  - name: base-controller-extension
+    title: Extend BaseController
+    description: Create domain-specific controller extending BaseController
+    depends_on: [schema-creation]
+    outputs:
+      - name: domain_controller
+        description: Controller with database-agnostic CRUD operations
+
+  - name: search-filter-implementation
+    title: Implement Search Filtering
+    description: Create search filter logic for the entity
+    depends_on: [base-controller-extension]
+    outputs:
+      - name: search_filters
+        description: Database-agnostic search filtering implementation
+
+  - name: api-routes-generation
+    title: Generate API Routes
+    description: Create Next.js API routes using the controller
+    depends_on: [search-filter-implementation]
+    outputs:
+      - name: api_endpoints
+        description: RESTful API endpoints with proper error handling
+
+  - name: type-safety-validation
+    title: Validate Type Safety
+    description: Ensure end-to-end TypeScript type safety
+    depends_on: [api-routes-generation]
+    outputs:
+      - name: type_validation
+        description: Validated type safety across the entire data flow
+
+agents: [base-controller-specialist, typescript-specialist, api-developer, database-specialist]

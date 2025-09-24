@@ -1,0 +1,153 @@
+# <!-- Powered by BMAD™ Core -->
+name: API Route Template
+description: Template for creating Next.js API routes with TypeScript
+version: 1.0.0
+
+template: |
+  import { NextRequest, NextResponse } from 'next/server'
+  import { z } from 'zod'
+
+  // Request validation schema
+  const {schemaName}Schema = z.object({
+    // Define your request body schema here
+    // Example: name: z.string().min(1)
+  })
+
+  // Response type
+  interface {ResponseType} {
+    // Define your response structure
+  }
+
+  export async function GET(request: NextRequest) {
+    try {
+      // Extract query parameters if needed
+      const { searchParams } = new URL(request.url)
+      const param = searchParams.get('param')
+
+      // Your GET logic here
+      const data: {ResponseType} = {
+        // Your response data
+      }
+
+      return NextResponse.json(data, { status: 200 })
+    } catch (error) {
+      console.error('[{EndpointName}] GET Error:', error)
+      return NextResponse.json(
+        { error: 'Internal server error' },
+        { status: 500 }
+      )
+    }
+  }
+
+  export async function POST(request: NextRequest) {
+    try {
+      const body = await request.json()
+      
+      // Validate request body
+      const validatedData = {schemaName}Schema.parse(body)
+
+      // Your POST logic here
+      const result: {ResponseType} = {
+        // Your response data
+      }
+
+      return NextResponse.json(result, { status: 201 })
+    } catch (error) {
+      if (error instanceof z.ZodError) {
+        return NextResponse.json(
+          { 
+            error: 'Invalid request data', 
+            details: error.errors 
+          },
+          { status: 400 }
+        )
+      }
+
+      console.error('[{EndpointName}] POST Error:', error)
+      return NextResponse.json(
+        { error: 'Internal server error' },
+        { status: 500 }
+      )
+    }
+  }
+
+  export async function PUT(request: NextRequest) {
+    try {
+      const body = await request.json()
+      const validatedData = {schemaName}Schema.parse(body)
+
+      // Your PUT logic here
+      const result: {ResponseType} = {
+        // Your response data
+      }
+
+      return NextResponse.json(result, { status: 200 })
+    } catch (error) {
+      if (error instanceof z.ZodError) {
+        return NextResponse.json(
+          { 
+            error: 'Invalid request data', 
+            details: error.errors 
+          },
+          { status: 400 }
+        )
+      }
+
+      console.error('[{EndpointName}] PUT Error:', error)
+      return NextResponse.json(
+        { error: 'Internal server error' },
+        { status: 500 }
+      )
+    }
+  }
+
+  export async function DELETE(request: NextRequest) {
+    try {
+      const { searchParams } = new URL(request.url)
+      const id = searchParams.get('id')
+
+      if (!id) {
+        return NextResponse.json(
+          { error: 'ID parameter is required' },
+          { status: 400 }
+        )
+      }
+
+      // Your DELETE logic here
+
+      return NextResponse.json(
+        { message: 'Successfully deleted' },
+        { status: 200 }
+      )
+    } catch (error) {
+      console.error('[{EndpointName}] DELETE Error:', error)
+      return NextResponse.json(
+        { error: 'Internal server error' },
+        { status: 500 }
+      )
+    }
+  }
+
+variables:
+  - name: EndpointName
+    type: string
+    description: The name of the API endpoint (PascalCase)
+    required: true
+  - name: schemaName
+    type: string
+    description: The name for the validation schema (camelCase)
+    required: true
+  - name: ResponseType
+    type: string
+    description: The TypeScript type name for responses (PascalCase)
+    required: true
+
+instructions: |
+  1. Replace {EndpointName} with your endpoint name
+  2. Replace {schemaName} with your schema variable name
+  3. Replace {ResponseType} with your response type name
+  4. Define your Zod validation schema
+  5. Implement the business logic for each HTTP method
+  6. Remove unused HTTP methods
+  7. Add proper error handling and logging
+  8. Consider authentication and authorization if needed

@@ -1,0 +1,65 @@
+# <!-- Powered by BMAD™ Core -->
+name: feature-based-project-setup
+title: Feature-Based Architecture Project Setup
+description: Complete workflow for setting up Next.js 15+ project with Feature-Based Architecture, Domain-Driven Design, and all required tooling
+version: 1.0.0
+
+tasks:
+  - name: project-initialization
+    title: Initialize Next.js 15+ Project
+    description: Create new Next.js project with App Router, TypeScript, and Tailwind 4.x
+    inputs:
+      - name: project_name
+        type: text
+        required: true
+        description: Name of the Next.js project
+      - name: package_manager
+        type: select
+        options: [pnpm, npm]
+        default: pnpm
+        description: Package manager preference (pnpm recommended)
+    outputs:
+      - name: project_structure
+        description: Next.js 15+ project with App Router and TypeScript
+
+  - name: feature-architecture-setup
+    title: Setup Feature-Based Architecture
+    description: Create (features)/ directory structure following Domain-Driven Design
+    depends_on: [project-initialization]
+    outputs:
+      - name: feature_structure
+        description: Feature-Based Architecture folder structure with shared infrastructure
+
+  - name: base-controller-foundation
+    title: Implement BaseController Foundation
+    description: Create BaseController abstract class and shared infrastructure
+    depends_on: [feature-architecture-setup]
+    outputs:
+      - name: base_controller
+        description: BaseController pattern with database-agnostic design
+
+  - name: schema-first-setup
+    title: Configure Schema-First Development
+    description: Set up Zod validation and schema-first patterns
+    depends_on: [base-controller-foundation]
+    outputs:
+      - name: schema_patterns
+        description: Zod schemas and validation patterns
+
+  - name: tooling-configuration
+    title: Configure Development Tooling
+    description: Set up ESLint 9, Prettier 3.6+, Husky hooks, and quality tools
+    depends_on: [project-initialization]
+    outputs:
+      - name: dev_tooling
+        description: Complete development tooling setup
+
+  - name: shared-infrastructure
+    title: Create Shared Infrastructure
+    description: Implement shared components, utilities, and patterns
+    depends_on: [feature-architecture-setup, schema-first-setup]
+    outputs:
+      - name: shared_components
+        description: Shared UI components and utility libraries
+
+agents: [domain-architect, nextjs-architect, base-controller-specialist, typescript-specialist]

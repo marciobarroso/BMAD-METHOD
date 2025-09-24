@@ -1,0 +1,132 @@
+# <!-- Powered by BMAD™ Core -->
+name: Schema-First Entity Template
+description: Template for creating schema-first entity definitions with Zod validation
+version: 1.0.0
+
+template: |
+  // (features)/({featureName})/api/{entityName}/schema.ts
+  import { z } from 'zod'
+
+  // Zod schema for runtime validation
+  export const {EntityName}Schema = z.object({
+    id: z.string().uuid().optional(), // Optional for create operations
+    {schemaFields}
+    createdAt: z.date().optional(),
+    updatedAt: z.date().optional()
+  })
+
+  // Create schema (without id, createdAt, updatedAt)
+  export const {EntityName}CreateSchema = {EntityName}Schema.omit({
+    id: true,
+    createdAt: true,
+    updatedAt: true
+  })
+
+  // Update schema (partial, without createdAt)
+  export const {EntityName}UpdateSchema = {EntityName}Schema.partial().omit({
+    id: true,
+    createdAt: true
+  })
+
+  // Search/Filter schema
+  export const {EntityName}SearchSchema = z.object({
+    query: z.string().optional(),
+    page: z.number().min(1).default(1),
+    limit: z.number().min(1).max(100).default(20),
+    sortBy: z.enum([{sortFields}]).optional(),
+    sortOrder: z.enum(['asc', 'desc']).default('desc')
+  })
+
+  // TypeScript interfaces derived from Zod schemas
+  export type {EntityName}Model = z.infer<typeof {EntityName}Schema>
+  export type {EntityName}Create = z.infer<typeof {EntityName}CreateSchema>
+  export type {EntityName}Update = z.infer<typeof {EntityName}UpdateSchema>
+  export type {EntityName}Search = z.infer<typeof {EntityName}SearchSchema>
+
+  // Database model interface (database-agnostic)
+  export interface {EntityName}DatabaseModel extends {EntityName}Model {
+    id: string
+    createdAt: Date
+    updatedAt: Date
+  }
+
+  // API Response types
+  export interface {EntityName}Response {
+    data: {EntityName}DatabaseModel
+    success: boolean
+    message?: string
+  }
+
+  export interface {EntityName}ListResponse {
+    data: {EntityName}DatabaseModel[]
+    pagination: {
+      page: number
+      limit: number
+      total: number
+      totalPages: number
+    }
+    success: boolean
+    message?: string
+  }
+
+  // Example database implementations (uncomment and customize):
+
+  // Prisma model example:
+  // model {EntityName} {
+  //   id        String   @id @default(cuid())
+  //   {prismaFields}
+  //   createdAt DateTime @default(now())
+  //   updatedAt DateTime @updatedAt
+  //   @@map("{entityName}")
+  // }
+
+  // Mongoose schema example:
+  // import mongoose from 'mongoose'
+  // 
+  // const {entityName}Schema = new mongoose.Schema({
+  //   {mongooseFields}
+  // }, {
+  //   timestamps: true // Automatically adds createdAt and updatedAt
+  // })
+  //
+  // export const {EntityName}Mongoose = mongoose.model('{EntityName}', {entityName}Schema)
+
+variables:
+  - name: featureName
+    type: string
+    description: The feature name in kebab-case (e.g., user-management)
+    required: true
+  - name: entityName
+    type: string
+    description: The entity name in kebab-case (e.g., user, product)
+    required: true
+  - name: EntityName
+    type: string
+    description: The entity name in PascalCase (e.g., User, Product)
+    required: true
+  - name: schemaFields
+    type: textarea
+    description: Zod schema fields definition (e.g., name: z.string().min(2), email: z.string().email())
+    required: true
+  - name: sortFields
+    type: string
+    description: Comma-separated list of sortable fields in quotes (e.g., "name", "createdAt", "updatedAt")
+    required: true
+  - name: prismaFields
+    type: textarea
+    description: Prisma model fields (optional)
+    required: false
+  - name: mongooseFields
+    type: textarea
+    description: Mongoose schema fields (optional)
+    required: false
+
+instructions: |
+  1. Replace {featureName} with your feature name (kebab-case)
+  2. Replace {entityName} with your entity name (kebab-case)
+  3. Replace {EntityName} with your entity name (PascalCase)
+  4. Define {schemaFields} with appropriate Zod validation rules
+  5. List {sortFields} with fields that can be used for sorting
+  6. Optionally add database-specific field definitions
+  7. Customize validation rules based on business requirements
+  8. Consider adding custom Zod refinements for complex validation

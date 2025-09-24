@@ -1,0 +1,41 @@
+# <!-- Powered by BMAD™ Core -->
+name: React Component Template
+description: Template for creating TypeScript React components with Tailwind CSS
+version: 1.0.0
+
+template: |
+  import { cn } from '@/lib/utils'
+
+  interface {ComponentName}Props {
+    className?: string
+    children?: React.ReactNode
+    // Add your props here
+  }
+
+  export function {ComponentName}({ 
+    className, 
+    children,
+    ...props 
+  }: {ComponentName}Props) {
+    return (
+      <div className={cn("", className)} {...props}>
+        {children}
+      </div>
+    )
+  }
+
+  {ComponentName}.displayName = "{ComponentName}"
+
+variables:
+  - name: ComponentName
+    type: string
+    description: The name of the React component (PascalCase)
+    required: true
+
+instructions: |
+  1. Replace {ComponentName} with your component name in PascalCase
+  2. Add specific props to the interface
+  3. Implement component logic and styling
+  4. Add proper TypeScript types
+  5. Use Tailwind classes for styling
+  6. Consider accessibility (a11y) requirements

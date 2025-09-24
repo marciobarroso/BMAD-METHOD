@@ -1,0 +1,26 @@
+# <!-- Powered by BMAD™ Core -->
+bundle:
+  name: Next.js Feature-Based Architecture Team
+  icon: ⚛️
+  description: Complete Feature-Based Architecture team for Next.js 15+ applications with Domain-Driven Design, TypeScript, Tailwind 4.x, and BaseController patterns
+agents:
+  - domain-architect
+  - nextjs-architect
+  - base-controller-specialist
+  - typescript-specialist
+  - tailwind-designer
+  - api-developer
+  - database-specialist
+  - auth-specialist
+  - testing-engineer
+  - deployment-specialist
+  - performance-optimizer
+  - security-auditor
+workflows:
+  - feature-based-project-setup
+  - domain-feature-development
+  - base-controller-implementation
+  - cross-feature-integration
+  - schema-first-development
+  - testing-pipeline
+  - deployment-pipeline
