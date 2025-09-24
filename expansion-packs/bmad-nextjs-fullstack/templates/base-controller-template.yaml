@@ -1,0 +1,93 @@
+# <!-- Powered by BMAD™ Core -->
+name: BaseController Extension Template
+description: Template for extending BaseController in Feature-Based Architecture
+version: 1.0.0
+
+template: |
+  // (features)/({featureName})/api/{entityName}/controller.ts
+  import { BaseController } from '@/shared/core/base-controller'
+  import { {EntityName}Schema, {EntityName}Model } from './schema'
+  import { NextRequest, NextResponse } from 'next/server'
+
+  export class {EntityName}Controller extends BaseController<{EntityName}Model> {
+    constructor(dbClient: any) {
+      super(dbClient, {EntityName}Schema)
+    }
+
+    /**
+     * Build search filter for {EntityName} entities
+     * Implement database-specific search logic here
+     */
+    protected buildSearchFilter(query: string | null): Record<string, any> {
+      if (!query) return {}
+
+      // Example implementations for different databases:
+      
+      // For Prisma (SQL):
+      // return {
+      //   OR: [
+      //     { name: { contains: query, mode: 'insensitive' } },
+      //     { description: { contains: query, mode: 'insensitive' } }
+      //   ]
+      // }
+
+      // For Mongoose (MongoDB):
+      // return {
+      //   $or: [
+      //     { name: new RegExp(query, 'i') },
+      //     { description: new RegExp(query, 'i') }
+      //   ]
+      // }
+
+      // Database-agnostic placeholder:
+      return { search: query }
+    }
+
+    /**
+     * Custom business logic methods for {EntityName}
+     * Add domain-specific operations here
+     */
+
+    // Example: Custom validation before create
+    protected async beforeCreate(data: Partial<{EntityName}Model>): Promise<void> {
+      // Add custom validation logic
+    }
+
+    // Example: Custom processing after create
+    protected async afterCreate(entity: {EntityName}Model): Promise<void> {
+      // Add post-creation logic (events, notifications, etc.)
+    }
+  }
+
+  // Export singleton instance (optional pattern)
+  let controllerInstance: {EntityName}Controller | null = null
+
+  export function get{EntityName}Controller(dbClient: any): {EntityName}Controller {
+    if (!controllerInstance) {
+      controllerInstance = new {EntityName}Controller(dbClient)
+    }
+    return controllerInstance
+  }
+
+variables:
+  - name: featureName
+    type: string
+    description: The feature name in kebab-case (e.g., user-management)
+    required: true
+  - name: entityName
+    type: string
+    description: The entity name in kebab-case (e.g., user, product)
+    required: true
+  - name: EntityName
+    type: string
+    description: The entity name in PascalCase (e.g., User, Product)
+    required: true
+
+instructions: |
+  1. Replace {featureName} with your feature name (kebab-case)
+  2. Replace {entityName} with your entity name (kebab-case)
+  3. Replace {EntityName} with your entity name (PascalCase)
+  4. Implement the buildSearchFilter method based on your database
+  5. Add custom business logic methods as needed
+  6. Ensure the schema.ts file exists with {EntityName}Schema and {EntityName}Model
+  7. Consider adding custom validation and processing hooks

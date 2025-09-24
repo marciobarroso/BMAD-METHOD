@@ -1,0 +1,174 @@
+# <!-- Powered by BMAD™ Core -->
+name: Feature Structure Template
+description: Template for creating complete Feature-Based Architecture structure
+version: 1.0.0
+
+template: |
+  # Feature Structure for ({featureName})
+  
+  ## Directory Structure
+  ```
+  app/(features)/({featureName})/
+  ├── api/                          # Backend API layer
+  │   └── {entityName}/
+  │       ├── [id]/                 # Dynamic routes for specific entities
+  │       │   ├── route.ts          # Individual entity operations (GET, PUT, DELETE)
+  │       │   └── [action]/         # Specific actions (optional)
+  │       │       └── route.ts
+  │       ├── controller.ts         # Business logic controller extending BaseController
+  │       ├── route.ts             # Collection operations (GET, POST)
+  │       └── schema.ts            # Zod validation & TypeScript types
+  ├── components/                   # Feature-specific UI components
+  │   ├── {entityName}-form.tsx    # Create/edit forms
+  │   ├── {entityName}-list.tsx    # List/table components
+  │   ├── {entityName}-card.tsx    # Individual item display
+  │   └── {entityName}-search.tsx  # Search/filter components
+  ├── hooks/                        # Custom React hooks
+  │   ├── use{EntityName}.ts       # Single entity operations
+  │   ├── use{EntityName}Mutations.ts # Create/update/delete mutations
+  │   └── use{Entities}.ts         # List/search operations
+  ├── types/                        # TypeScript type definitions
+  │   └── {entityName}.types.ts    # Feature-specific types (extends base schema types)
+  └── {featurePages}/              # Next.js pages
+      ├── [id]/                    # Dynamic pages for specific entities
+      │   ├── page.tsx            # Entity detail view
+      │   └── edit/               # Edit entity page
+      │       └── page.tsx
+      ├── new/                     # Create new entity pages
+      │   └── page.tsx
+      └── page.tsx                 # Feature listing/index page
+  ```
+
+  ## File Templates
+
+  ### API Route (route.ts)
+  ```typescript
+  import { NextRequest, NextResponse } from 'next/server'
+  import { get{EntityName}Controller } from './controller'
+  import { dbConnect } from '@/shared/lib/db-connection'
+  import { withErrorHandler } from '@/shared/lib/error-handler'
+
+  // GET /api/{entityName} - List entities
+  export const GET = withErrorHandler(async (request: NextRequest) => {
+    const dbClient = await dbConnect()
+    const controller = get{EntityName}Controller(dbClient)
+    return await controller.getAll(request)
+  })
+
+  // POST /api/{entityName} - Create entity
+  export const POST = withErrorHandler(async (request: NextRequest) => {
+    const dbClient = await dbConnect()
+    const controller = get{EntityName}Controller(dbClient)
+    return await controller.create(request)
+  })
+  ```
+
+  ### Feature Hook (use{Entities}.ts)
+  ```typescript
+  import { useState, useCallback } from 'react'
+  import { {EntityName}DatabaseModel, {EntityName}Search } from '../api/{entityName}/schema'
+  import { useAppContext } from '@/shared/contexts/app-context'
+
+  export const use{Entities} = () => {
+    const [entities, setEntities] = useState<{EntityName}DatabaseModel[]>([])
+    const [pagination, setPagination] = useState({
+      page: 1,
+      limit: 20,
+      total: 0,
+      totalPages: 0
+    })
+    const { isLoading, setIsLoading } = useAppContext()
+
+    const fetchEntities = useCallback(async (params: {EntityName}Search = {}) => {
+      setIsLoading(true)
+      try {
+        const searchParams = new URLSearchParams(params as any)
+        const response = await fetch(`/api/{entityName}?${{searchParams}}`)
+        const result = await response.json()
+        
+        if (result.success) {
+          setEntities(result.data)
+          setPagination(result.pagination)
+        }
+      } catch (error) {
+        console.error('Error fetching {entities}:', error)
+      } finally {
+        setIsLoading(false)
+      }
+    }, [setIsLoading])
+
+    return {
+      entities,
+      pagination,
+      isLoading,
+      fetchEntities
+    }
+  }
+  ```
+
+  ### Feature Component ({EntityName}List.tsx)
+  ```typescript
+  'use client'
+  
+  import { use{Entities} } from '../hooks/use{Entities}'
+  import { {EntityName}Card } from './{entityName}-card'
+  import { useEffect } from 'react'
+
+  export function {EntityName}List() {
+    const { entities, isLoading, fetchEntities } = use{Entities}()
+
+    useEffect(() => {
+      fetchEntities()
+    }, [fetchEntities])
+
+    if (isLoading) {
+      return <div className="flex justify-center p-8">Loading...</div>
+    }
+
+    return (
+      <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
+        {entities.map((entity) => (
+          <{EntityName}Card key={entity.id} entity={entity} />
+        ))}
+      </div>
+    )
+  }
+  ```
+
+variables:
+  - name: featureName
+    type: string
+    description: The feature name in kebab-case (e.g., user-management)
+    required: true
+  - name: entityName
+    type: string
+    description: The entity name in kebab-case (e.g., user, product)
+    required: true
+  - name: EntityName
+    type: string
+    description: The entity name in PascalCase (e.g., User, Product)
+    required: true
+  - name: Entities
+    type: string
+    description: The plural entity name in PascalCase (e.g., Users, Products)
+    required: true
+  - name: entities
+    type: string
+    description: The plural entity name in camelCase (e.g., users, products)
+    required: true
+  - name: featurePages
+    type: string
+    description: The feature pages directory name (usually plural kebab-case)
+    required: true
+
+instructions: |
+  1. Replace {featureName} with your feature name (kebab-case)
+  2. Replace {entityName} with your entity name (kebab-case)
+  3. Replace {EntityName} with your entity name (PascalCase)
+  4. Replace {Entities} with plural entity name (PascalCase)
+  5. Replace {entities} with plural entity name (camelCase)
+  6. Replace {featurePages} with your pages directory name
+  7. Create the directory structure following this template
+  8. Implement each file according to the patterns shown
+  9. Ensure all imports and references are correctly updated
+  10. Test the complete feature integration

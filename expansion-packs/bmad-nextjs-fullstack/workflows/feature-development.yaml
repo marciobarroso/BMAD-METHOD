@@ -1,0 +1,56 @@
+# <!-- Powered by BMAD™ Core -->
+name: feature-development
+title: Feature Development Workflow
+description: Complete workflow for developing new features in Next.js applications
+version: 1.0.0
+
+tasks:
+  - name: feature-planning
+    title: Plan Feature Architecture
+    description: Design the feature architecture and component structure
+    inputs:
+      - name: feature_name
+        type: text
+        required: true
+        description: Name of the feature to develop
+      - name: feature_requirements
+        type: textarea
+        required: true
+        description: Detailed requirements and specifications
+    outputs:
+      - name: feature_plan
+        description: Feature architecture and implementation plan
+
+  - name: component-development
+    title: Develop React Components
+    description: Create React components with TypeScript and Tailwind
+    depends_on: [feature-planning]
+    outputs:
+      - name: components
+        description: React components with proper typing and styling
+
+  - name: api-integration
+    title: API Integration
+    description: Integrate with backend APIs and handle data
+    depends_on: [feature-planning]
+    outputs:
+      - name: api_integration
+        description: API integration code and data handling
+
+  - name: testing
+    title: Write Tests
+    description: Create unit and integration tests for the feature
+    depends_on: [component-development, api-integration]
+    outputs:
+      - name: tests
+        description: Comprehensive test suite
+
+  - name: documentation
+    title: Document Feature
+    description: Create documentation for the new feature
+    depends_on: [component-development, api-integration, testing]
+    outputs:
+      - name: documentation
+        description: Feature documentation and usage examples
+
+agents: [nextjs-architect, typescript-specialist, tailwind-designer, api-developer, testing-engineer]

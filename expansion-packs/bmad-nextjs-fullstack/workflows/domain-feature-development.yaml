@@ -1,0 +1,88 @@
+# <!-- Powered by BMAD™ Core -->
+name: domain-feature-development
+title: Domain Feature Development Workflow
+description: Complete workflow for developing a new business domain feature following Feature-Based Architecture and Domain-Driven Design patterns
+version: 1.0.0
+
+tasks:
+  - name: domain-analysis
+    title: Business Domain Analysis
+    description: Analyze business requirements and define bounded context
+    inputs:
+      - name: business_domain
+        type: text
+        required: true
+        description: Name of the business domain (e.g., user-management, order-processing)
+      - name: business_requirements
+        type: textarea
+        required: true
+        description: Detailed business requirements and use cases
+    outputs:
+      - name: domain_model
+        description: Domain model with entities, relationships, and bounded context
+
+  - name: feature-structure-creation
+    title: Create Feature Structure
+    description: Generate feature folder structure in (features)/ directory
+    depends_on: [domain-analysis]
+    outputs:
+      - name: feature_folders
+        description: Complete feature directory structure (api/, components/, hooks/, types/)
+
+  - name: schema-definition
+    title: Define Domain Schemas
+    description: Create Zod schemas and TypeScript types for domain entities
+    depends_on: [feature-structure-creation]
+    outputs:
+      - name: domain_schemas
+        description: Zod validation schemas and TypeScript interfaces
+
+  - name: controller-implementation
+    title: Implement Feature Controller
+    description: Create domain-specific controller extending BaseController
+    depends_on: [schema-definition]
+    outputs:
+      - name: feature_controller
+        description: Domain controller with CRUD operations and business logic
+
+  - name: api-routes-creation
+    title: Create API Routes
+    description: Generate Next.js API routes for the domain
+    depends_on: [controller-implementation]
+    outputs:
+      - name: api_routes
+        description: RESTful API routes with proper error handling
+
+  - name: hooks-development
+    title: Develop Custom Hooks
+    description: Create React hooks for data fetching and mutations
+    depends_on: [api-routes-creation]
+    outputs:
+      - name: custom_hooks
+        description: Data fetching and mutation hooks following the established patterns
+
+  - name: components-creation
+    title: Create Feature Components
+    description: Build React components specific to the domain
+    depends_on: [hooks-development]
+    outputs:
+      - name: feature_components
+        description: React components with proper TypeScript typing and Tailwind styling
+
+  - name: pages-implementation
+    title: Implement Feature Pages
+    description: Create Next.js pages for the domain feature
+    depends_on: [components-creation]
+    outputs:
+      - name: feature_pages
+        description: Next.js pages with proper layouts and navigation
+
+  - name: integration-testing
+    title: Feature Integration Testing
+    description: Test the complete feature implementation
+    depends_on: [pages-implementation]
+    outputs:
+      - name: test_suite
+        description: Comprehensive test suite for the feature
+
+agents: [domain-architect, nextjs-architect, base-controller-specialist, typescript-specialist, api-developer, tailwind-designer]
