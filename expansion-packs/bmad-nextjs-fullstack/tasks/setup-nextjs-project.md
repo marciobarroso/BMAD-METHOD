@@ -1,9 +1,11 @@
 # Setup Next.js Project
 
 ## Task Overview
+
 Initialize a new Next.js project with TypeScript, Tailwind CSS, ESLint, and Prettier configuration.
 
 ## Prerequisites
+
 - Node.js 18+ installed
 - npm or yarn package manager
 - Git for version control
@@ -11,19 +13,23 @@ Initialize a new Next.js project with TypeScript, Tailwind CSS, ESLint, and Pret
 ## Steps
 
 ### 1. Create Next.js Project
+
 ```bash
 npx create-next-app@latest {project_name} --typescript --tailwind --eslint --app --src-dir --import-alias "@/*"
 cd {project_name}
 ```
 
 ### 2. Install Additional Dependencies
+
 ```bash
 npm install --save-dev prettier prettier-plugin-tailwindcss @types/node
 npm install lucide-react clsx tailwind-merge
 ```
 
 ### 3. Configure Prettier
+
 Create `.prettierrc.json`:
+
 ```json
 {
   "semi": false,
@@ -36,7 +42,9 @@ Create `.prettierrc.json`:
 ```
 
 ### 4. Update ESLint Configuration
+
 Extend `.eslintrc.json`:
+
 ```json
 {
   "extends": ["next/core-web-vitals", "prettier"],
@@ -48,7 +56,9 @@ Extend `.eslintrc.json`:
 ```
 
 ### 5. Configure TypeScript
+
 Update `tsconfig.json` for strict mode:
+
 ```json
 {
   "compilerOptions": {
@@ -61,7 +71,9 @@ Update `tsconfig.json` for strict mode:
 ```
 
 ### 6. Set up Scripts
+
 Add to `package.json`:
+
 ```json
 {
   "scripts": {
@@ -73,6 +85,7 @@ Add to `package.json`:
 ```
 
 ## Validation Checklist
+
 - [ ] Next.js project created with TypeScript
 - [ ] Tailwind CSS configured and working
 - [ ] ESLint and Prettier configured
@@ -81,6 +94,7 @@ Add to `package.json`:
 - [ ] Project builds without errors
 
 ## Next Steps
+
 - Set up folder structure
 - Configure environment variables
 - Create initial components

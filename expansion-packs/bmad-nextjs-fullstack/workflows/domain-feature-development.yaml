@@ -85,4 +85,12 @@ tasks:
       - name: test_suite
         description: Comprehensive test suite for the feature
 
-agents: [domain-architect, nextjs-architect, base-controller-specialist, typescript-specialist, api-developer, tailwind-designer]
+agents:
+  [
+    domain-architect,
+    nextjs-architect,
+    base-controller-specialist,
+    typescript-specialist,
+    api-developer,
+    tailwind-designer,
+  ]
