@@ -2,7 +2,7 @@
 bundle:
   name: Next.js Feature-Based Architecture Team
   icon: ⚛️
-  description: Complete Feature-Based Architecture team for Next.js 15+ applications with Domain-Driven Design, TypeScript, Tailwind 4.x, and BaseController patterns
+  description: Core Feature-Based Architecture team for Next.js 15+ applications with Domain-Driven Design, TypeScript, Tailwind 4.x, and BaseController patterns
 agents:
   - domain-architect
   - nextjs-architect
@@ -10,17 +10,9 @@ agents:
   - typescript-specialist
   - tailwind-designer
   - api-developer
-  - database-specialist
-  - auth-specialist
-  - testing-engineer
-  - deployment-specialist
-  - performance-optimizer
-  - security-auditor
 workflows:
   - feature-based-project-setup
   - domain-feature-development
   - base-controller-implementation
-  - cross-feature-integration
-  - schema-first-development
-  - testing-pipeline
-  - deployment-pipeline
+  - feature-development
+  - nextjs-project-setup

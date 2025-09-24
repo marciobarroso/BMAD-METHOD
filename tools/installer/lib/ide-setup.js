@@ -2,7 +2,7 @@ const path = require('node:path');
 const fs = require('fs-extra');
 const yaml = require('js-yaml');
 const chalk = require('chalk');
-const inquirer = require('inquirer');
+const inquirer = require('inquirer').default;
 const cjson = require('comment-json');
 const fileManager = require('./file-manager');
 const configLoader = require('./config-loader');
@@ -2369,7 +2369,7 @@ tools: ['changes', 'codebase', 'fetch', 'findTestFiles', 'githubRepo', 'problems
 
   async setupAuggieCLI(installDir, selectedAgent, spinner = null, preConfiguredSettings = null) {
     const os = require('node:os');
-    const inquirer = require('inquirer');
+    const inquirer = require('inquirer').default;
     const agents = selectedAgent ? [selectedAgent] : await this.getAllAgentIds(installDir);
 
     // Get the IDE configuration to access location options

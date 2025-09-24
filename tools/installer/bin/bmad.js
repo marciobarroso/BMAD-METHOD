@@ -5,7 +5,7 @@ const path = require('node:path');
 const fs = require('node:fs').promises;
 const yaml = require('js-yaml');
 const chalk = require('chalk').default || require('chalk');
-const inquirer = require('inquirer').default || require('inquirer');
+const inquirer = require('inquirer').default;
 const semver = require('semver');
 const https = require('node:https');
 

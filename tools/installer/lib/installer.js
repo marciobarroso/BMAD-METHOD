@@ -2,7 +2,7 @@ const path = require('node:path');
 const fs = require('fs-extra');
 const chalk = require('chalk');
 const ora = require('ora');
-const inquirer = require('inquirer');
+const inquirer = require('inquirer').default;
 const fileManager = require('./file-manager');
 const configLoader = require('./config-loader');
 const ideSetup = require('./ide-setup');
@@ -1456,11 +1456,22 @@ class Installer {
 
     // Also get existing agents in the expansion pack
     const existingAgents = new Set();
-    const agentFiles = await resourceLocator.findFiles('agents/*.md', {
+
+    // Check for .md agents first
+    const agentFilesMd = await resourceLocator.findFiles('agents/*.md', {
       cwd: expansionDotFolder,
     });
-    for (const agentFile of agentFiles) {
+    for (const agentFile of agentFilesMd) {
       const agentName = path.basename(agentFile, '.md');
+      existingAgents.add(agentName);
+    }
+
+    // Also check for .yaml agents
+    const agentFilesYaml = await resourceLocator.findFiles('agents/*.yaml', {
+      cwd: expansionDotFolder,
+    });
+    for (const agentFile of agentFilesYaml) {
+      const agentName = path.basename(agentFile, '.yaml');
       existingAgents.add(agentName);
     }
 
