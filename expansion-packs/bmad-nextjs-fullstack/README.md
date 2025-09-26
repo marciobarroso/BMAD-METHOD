@@ -211,8 +211,8 @@ This extension pack is part of the BMAD Method project and follows the same MIT 
 
 **Compatibility:**
 
-- Next.js 14+
-- Node.js 18+
+- Next.js 15+
+- Node.js 20.10.0+
 - TypeScript 5+
 
 ---

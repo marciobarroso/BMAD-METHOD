@@ -15,4 +15,3 @@ workflows:
   - domain-feature-development
   - base-controller-implementation
   - feature-development
-  - nextjs-project-setup
