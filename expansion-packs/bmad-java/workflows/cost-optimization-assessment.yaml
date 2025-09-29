@@ -1,0 +1,132 @@
+# <!-- Powered by BMAD™ Core -->
+name: cost-optimization-assessment
+version: 1.0.0
+title: Cost Optimization Assessment & Implementation
+description: >-
+  Complete workflow for implementing cost optimization best practices for Java applications
+  following AWS Well-Architected Framework Cost Optimization pillar. Covers cost analysis,
+  right-sizing, budget management, and cost monitoring implementation.
+phases:
+  - name: Cost Analysis & Assessment
+    description: Analyze current costs and identify optimization opportunities
+    tasks:
+      - current-cost-analysis
+      - cost-attribution-setup
+      - optimization-opportunities-identification
+      - cost-baseline-establishment
+    agent: cost-optimization-engineer
+    deliverables:
+      - Current Cost Analysis Report
+      - Cost Attribution Setup
+      - Optimization Opportunities Report
+      - Cost Baseline Documentation
+
+  - name: Right-Sizing Implementation
+    description: Implement right-sizing strategies for AWS resources
+    tasks:
+      - resource-utilization-analysis
+      - right-sizing-recommendations
+      - instance-optimization
+      - storage-optimization
+    agent: cost-optimization-engineer
+    deliverables:
+      - Resource Utilization Analysis
+      - Right-sizing Recommendations
+      - Instance Optimization Plan
+      - Storage Optimization Strategy
+
+  - name: Cost Management Setup
+    description: Implement cost management and budget controls
+    tasks:
+      - budget-alerts-setup
+      - cost-allocation-tags
+      - reserved-instances-planning
+      - savings-plans-implementation
+    agent: cost-optimization-engineer
+    deliverables:
+      - Budget Alerts Configuration
+      - Cost Allocation Tags Setup
+      - Reserved Instances Plan
+      - Savings Plans Implementation
+
+  - name: Architecture Optimization
+    description: Optimize architecture for cost efficiency
+    tasks:
+      - serverless-opportunities
+      - managed-services-evaluation
+      - auto-scaling-optimization
+      - data-transfer-optimization
+    agent: aws-cloud-engineer
+    deliverables:
+      - Serverless Opportunities Analysis
+      - Managed Services Evaluation
+      - Auto-scaling Optimization
+      - Data Transfer Optimization Plan
+
+  - name: Cost Monitoring & Reporting
+    description: Implement cost monitoring and reporting
+    tasks:
+      - cost-monitoring-dashboard
+      - cost-anomaly-detection
+      - regular-cost-reviews
+      - cost-optimization-metrics
+    agent: cost-optimization-engineer
+    deliverables:
+      - Cost Monitoring Dashboard
+      - Cost Anomaly Detection Setup
+      - Regular Cost Review Process
+      - Cost Optimization Metrics
+
+decision-points:
+  - name: Compute Optimization Strategy
+    description: Choose compute optimization approach
+    options:
+      - Reserved Instances
+      - Savings Plans
+      - Spot Instances
+      - Serverless (Lambda/Fargate)
+    criteria:
+      - Workload characteristics
+      - Cost savings potential
+      - Flexibility requirements
+      - Risk tolerance
+
+  - name: Storage Optimization Strategy
+    description: Select storage optimization approach
+    options:
+      - S3 Intelligent Tiering
+      - EBS Optimization
+      - Data lifecycle policies
+      - Compression and deduplication
+    criteria:
+      - Data access patterns
+      - Performance requirements
+      - Cost savings potential
+      - Compliance needs
+
+  - name: Cost Monitoring Platform
+    description: Choose cost monitoring and alerting solution
+    options:
+      - AWS Cost Explorer + Budgets
+      - AWS Cost Anomaly Detection
+      - Third-party cost management tools
+      - Custom cost monitoring
+    criteria:
+      - Monitoring requirements
+      - Alerting needs
+      - Reporting capabilities
+      - Integration requirements
+
+success-criteria:
+  - Current costs analyzed and documented
+  - Right-sizing recommendations implemented
+  - Budget alerts and controls configured
+  - Cost allocation tags properly applied
+  - Reserved instances or savings plans utilized
+  - Architecture optimized for cost efficiency
+  - Cost monitoring dashboard implemented
+  - Cost anomaly detection configured
+  - Regular cost review process established
+  - Team trained on cost optimization practices
+  - Cost optimization metrics tracked
+  - Documentation complete and accessible

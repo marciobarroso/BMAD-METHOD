@@ -1,12 +1,12 @@
 # <!-- Powered by BMAD™ Core -->
-name: java-development-team
-version: 2.0.0
-title: Java Development Team
+name: enterprise-java-team
+version: 1.0.0
+title: Enterprise Java Development Team
 description: >-
-  Specialized team of AI agents for modern Java development aligned with AWS Well-Architected Framework.
-  Includes architects, Spring Boot developers, AWS cloud engineers, DevOps engineers, SRE engineers,
-  cost optimization engineers, and sustainability engineers working together to create and modernize
-  Java applications following Well-Architected best practices.
+  Comprehensive enterprise-grade team of AI agents for large-scale Java application
+  development and modernization. Includes all specialized agents working together
+  to deliver enterprise-grade Java applications with full AWS Well-Architected
+  Framework compliance, security, reliability, and operational excellence.
 agents:
   - java-architect
   - spring-boot-developer
@@ -16,16 +16,16 @@ agents:
   - cost-optimization-engineer
   - sustainability-engineer
 workflows:
-  # Greenfield Workflows
+  # Greenfield Enterprise Workflows
   - java-web-project-greenfield
   - java-api-project-greenfield
   - java-microservice-greenfield
-  # Brownfield Workflows
+  # Brownfield Enterprise Workflows
   - java-version-modernization
   - build-system-modernization
   - application-server-to-container
   - cloud-migration
-  # Well-Architected Workflows
+  # Well-Architected Enterprise Workflows
   - operational-excellence-setup
   - security-assessment
   - reliability-implementation

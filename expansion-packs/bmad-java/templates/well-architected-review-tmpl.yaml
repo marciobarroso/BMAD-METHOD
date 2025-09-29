@@ -1,0 +1,220 @@
+# <!-- Powered by BMAD™ Core -->
+name: well-architected-review
+version: 1.0.0
+title: AWS Well-Architected Framework Review
+description: >-
+  Comprehensive review template for Java applications against AWS Well-Architected Framework
+  pillars. Covers Operational Excellence, Security, Reliability, Performance Efficiency,
+  Cost Optimization, and Sustainability assessments.
+metadata:
+  application-name: "{{application_name}}"
+  review-date: "{{review_date}}"
+  reviewer: "{{reviewer_name}}"
+  application-version: "{{application_version}}"
+  aws-region: "{{aws_region}}"
+
+# Operational Excellence Pillar
+operational-excellence:
+  assessment:
+    current-state: "{{operational_excellence_current_state}}"
+    maturity-level: "{{operational_excellence_maturity}}"
+    key-strengths: "{{operational_excellence_strengths}}"
+    improvement-areas: "{{operational_excellence_improvements}}"
+
+  ci-cd-pipeline:
+    status: "{{ci_cd_status}}"
+    automation-level: "{{ci_cd_automation}}"
+    testing-coverage: "{{ci_cd_testing}}"
+    deployment-strategy: "{{ci_cd_deployment}}"
+    recommendations: "{{ci_cd_recommendations}}"
+
+  monitoring-observability:
+    monitoring-coverage: "{{monitoring_coverage}}"
+    logging-implementation: "{{logging_implementation}}"
+    alerting-setup: "{{alerting_setup}}"
+    observability-tools: "{{observability_tools}}"
+    recommendations: "{{monitoring_recommendations}}"
+
+  automation:
+    infrastructure-as-code: "{{iac_status}}"
+    configuration-management: "{{config_management}}"
+    operational-automation: "{{operational_automation}}"
+    recommendations: "{{automation_recommendations}}"
+
+# Security Pillar
+security:
+  assessment:
+    current-state: "{{security_current_state}}"
+    maturity-level: "{{security_maturity}}"
+    key-strengths: "{{security_strengths}}"
+    improvement-areas: "{{security_improvements}}"
+
+  identity-access-management:
+    authentication-strategy: "{{auth_strategy}}"
+    authorization-model: "{{authz_model}}"
+    iam-policies: "{{iam_policies}}"
+    recommendations: "{{iam_recommendations}}"
+
+  data-protection:
+    encryption-at-rest: "{{encryption_at_rest}}"
+    encryption-in-transit: "{{encryption_in_transit}}"
+    key-management: "{{key_management}}"
+    recommendations: "{{data_protection_recommendations}}"
+
+  infrastructure-security:
+    network-security: "{{network_security}}"
+    security-groups: "{{security_groups}}"
+    vpc-configuration: "{{vpc_config}}"
+    recommendations: "{{infrastructure_security_recommendations}}"
+
+  application-security:
+    secure-coding-practices: "{{secure_coding}}"
+    vulnerability-management: "{{vulnerability_management}}"
+    security-testing: "{{security_testing}}"
+    recommendations: "{{application_security_recommendations}}"
+
+# Reliability Pillar
+reliability:
+  assessment:
+    current-state: "{{reliability_current_state}}"
+    maturity-level: "{{reliability_maturity}}"
+    key-strengths: "{{reliability_strengths}}"
+    improvement-areas: "{{reliability_improvements}}"
+
+  sli-slo-definition:
+    service-level-indicators: "{{sli_definition}}"
+    service-level-objectives: "{{slo_definition}}"
+    error-budget-management: "{{error_budget}}"
+    recommendations: "{{sli_slo_recommendations}}"
+
+  fault-tolerance:
+    circuit-breakers: "{{circuit_breakers}}"
+    retry-mechanisms: "{{retry_mechanisms}}"
+    timeout-configuration: "{{timeout_config}}"
+    recommendations: "{{fault_tolerance_recommendations}}"
+
+  high-availability:
+    multi-az-deployment: "{{multi_az_deployment}}"
+    load-balancing: "{{load_balancing}}"
+    auto-scaling: "{{auto_scaling}}"
+    recommendations: "{{ha_recommendations}}"
+
+  disaster-recovery:
+    backup-strategy: "{{backup_strategy}}"
+    recovery-procedures: "{{recovery_procedures}}"
+    rto-rpo-definition: "{{rto_rpo}}"
+    recommendations: "{{dr_recommendations}}"
+
+# Performance Efficiency Pillar
+performance-efficiency:
+  assessment:
+    current-state: "{{performance_current_state}}"
+    maturity-level: "{{performance_maturity}}"
+    key-strengths: "{{performance_strengths}}"
+    improvement-areas: "{{performance_improvements}}"
+
+  compute-optimization:
+    instance-sizing: "{{instance_sizing}}"
+    auto-scaling-configuration: "{{auto_scaling_config}}"
+    performance-monitoring: "{{performance_monitoring}}"
+    recommendations: "{{compute_recommendations}}"
+
+  storage-optimization:
+    storage-types: "{{storage_types}}"
+    data-lifecycle-management: "{{data_lifecycle}}"
+    performance-tuning: "{{storage_performance}}"
+    recommendations: "{{storage_recommendations}}"
+
+  database-optimization:
+    database-configuration: "{{db_config}}"
+    query-optimization: "{{query_optimization}}"
+    connection-pooling: "{{connection_pooling}}"
+    recommendations: "{{database_recommendations}}"
+
+  network-optimization:
+    cdn-usage: "{{cdn_usage}}"
+    network-topology: "{{network_topology}}"
+    bandwidth-optimization: "{{bandwidth_optimization}}"
+    recommendations: "{{network_recommendations}}"
+
+# Cost Optimization Pillar
+cost-optimization:
+  assessment:
+    current-state: "{{cost_current_state}}"
+    maturity-level: "{{cost_maturity}}"
+    key-strengths: "{{cost_strengths}}"
+    improvement-areas: "{{cost_improvements}}"
+
+  cost-analysis:
+    current-monthly-cost: "{{current_monthly_cost}}"
+    cost-breakdown: "{{cost_breakdown}}"
+    cost-trends: "{{cost_trends}}"
+    recommendations: "{{cost_analysis_recommendations}}"
+
+  right-sizing:
+    resource-utilization: "{{resource_utilization}}"
+    right-sizing-opportunities: "{{right_sizing_opportunities}}"
+    recommendations: "{{right_sizing_recommendations}}"
+
+  cost-management:
+    budget-alerts: "{{budget_alerts}}"
+    cost-allocation-tags: "{{cost_tags}}"
+    reserved-instances: "{{reserved_instances}}"
+    recommendations: "{{cost_management_recommendations}}"
+
+  architecture-optimization:
+    serverless-opportunities: "{{serverless_opportunities}}"
+    managed-services-usage: "{{managed_services}}"
+    recommendations: "{{architecture_optimization_recommendations}}"
+
+# Sustainability Pillar
+sustainability:
+  assessment:
+    current-state: "{{sustainability_current_state}}"
+    maturity-level: "{{sustainability_maturity}}"
+    key-strengths: "{{sustainability_strengths}}"
+    improvement-areas: "{{sustainability_improvements}}"
+
+  environmental-impact:
+    carbon-footprint: "{{carbon_footprint}}"
+    energy-consumption: "{{energy_consumption}}"
+    resource-efficiency: "{{resource_efficiency}}"
+    recommendations: "{{environmental_recommendations}}"
+
+  green-computing:
+    renewable-energy-usage: "{{renewable_energy}}"
+    energy-efficient-patterns: "{{energy_efficient_patterns}}"
+    sustainable-architecture: "{{sustainable_architecture}}"
+    recommendations: "{{green_computing_recommendations}}"
+
+  resource-optimization:
+    compute-efficiency: "{{compute_efficiency}}"
+    storage-efficiency: "{{storage_efficiency}}"
+    network-efficiency: "{{network_efficiency}}"
+    recommendations: "{{resource_optimization_recommendations}}"
+
+# Overall Assessment
+overall-assessment:
+  total-score: "{{total_score}}"
+  pillar-scores:
+    operational-excellence: "{{operational_excellence_score}}"
+    security: "{{security_score}}"
+    reliability: "{{reliability_score}}"
+    performance-efficiency: "{{performance_score}}"
+    cost-optimization: "{{cost_score}}"
+    sustainability: "{{sustainability_score}}"
+
+  priority-recommendations:
+    high-priority: "{{high_priority_recommendations}}"
+    medium-priority: "{{medium_priority_recommendations}}"
+    low-priority: "{{low_priority_recommendations}}"
+
+  next-steps:
+    immediate-actions: "{{immediate_actions}}"
+    short-term-goals: "{{short_term_goals}}"
+    long-term-goals: "{{long_term_goals}}"
+
+  follow-up-schedule:
+    next-review-date: "{{next_review_date}}"
+    review-frequency: "{{review_frequency}}"
+    responsible-team: "{{responsible_team}}"

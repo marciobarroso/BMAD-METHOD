@@ -1,12 +1,13 @@
 # <!-- Powered by BMAD™ Core -->
 name: bmad-java
-version: 1.0.0
+version: 2.0.0
 short-title: Java Development Studio
 description: >-
-  Comprehensive AI-powered Java development framework for creating modern Java applications
-  and modernizing legacy systems. Features specialized workflows for greenfield projects
-  (web apps, APIs, microservices) and brownfield modernization (Java version upgrades,
-  build system migration, containerization, cloud deployment). Built for Java 21,
-  Spring Boot ecosystem, Maven, and AWS cloud platform.
+  Comprehensive AI-powered Java development framework aligned with AWS Well-Architected Framework.
+  Features specialized workflows for greenfield projects (web apps, APIs, microservices) and 
+  brownfield modernization (Java version upgrades, build system migration, containerization, 
+  cloud deployment). Includes Well-Architected pillars: Operational Excellence, Security, 
+  Reliability, Performance Efficiency, Cost Optimization, and Sustainability. Built for Java 21,
+  Spring Boot ecosystem, Maven, and AWS cloud platform with enterprise-grade practices.
 author: marciobarroso
 slashPrefix: bmad-java

@@ -1,0 +1,132 @@
+# <!-- Powered by BMAD™ Core -->
+name: security-assessment
+version: 1.0.0
+title: Security Assessment & Implementation
+description: >-
+  Complete workflow for implementing security best practices for Java applications
+  following AWS Well-Architected Framework Security pillar. Covers security assessment,
+  threat modeling, security controls implementation, and compliance verification.
+phases:
+  - name: Security Assessment
+    description: Assess current security posture and identify security gaps
+    tasks:
+      - security-posture-assessment
+      - threat-modeling
+      - vulnerability-assessment
+      - compliance-gap-analysis
+    agent: java-architect
+    deliverables:
+      - Security Posture Assessment Report
+      - Threat Model Documentation
+      - Vulnerability Assessment Report
+      - Compliance Gap Analysis
+
+  - name: Security Architecture Design
+    description: Design comprehensive security architecture
+    tasks:
+      - security-architecture-design
+      - defense-in-depth-strategy
+      - identity-access-management-design
+      - data-protection-strategy
+    agent: java-architect
+    deliverables:
+      - Security Architecture Document
+      - Defense in Depth Strategy
+      - IAM Design and Policies
+      - Data Protection Strategy
+
+  - name: Application Security Implementation
+    description: Implement security controls in Java application
+    tasks:
+      - spring-security-implementation
+      - authentication-authorization-setup
+      - input-validation-implementation
+      - secure-coding-practices
+    agent: spring-boot-developer
+    deliverables:
+      - Spring Security Configuration
+      - Authentication & Authorization Implementation
+      - Input Validation Framework
+      - Secure Coding Guidelines
+
+  - name: Infrastructure Security Setup
+    description: Implement infrastructure security controls
+    tasks:
+      - aws-security-services-setup
+      - network-security-configuration
+      - encryption-implementation
+      - security-monitoring-setup
+    agent: aws-cloud-engineer
+    deliverables:
+      - AWS Security Services Configuration
+      - Network Security Setup
+      - Encryption Implementation
+      - Security Monitoring Configuration
+
+  - name: Security Testing & Validation
+    description: Implement security testing and validation
+    tasks:
+      - security-testing-implementation
+      - penetration-testing-setup
+      - security-scanning-automation
+      - compliance-validation
+    agent: java-architect
+    deliverables:
+      - Security Testing Framework
+      - Penetration Testing Procedures
+      - Automated Security Scanning
+      - Compliance Validation Report
+
+decision-points:
+  - name: Authentication Strategy
+    description: Choose authentication and authorization approach
+    options:
+      - Spring Security with JWT
+      - OAuth2 with Spring Security
+      - AWS Cognito Integration
+      - SAML/OIDC Integration
+    criteria:
+      - Security requirements
+      - User management needs
+      - Integration requirements
+      - Compliance requirements
+
+  - name: Data Encryption Strategy
+    description: Select data encryption approach
+    options:
+      - AWS KMS for key management
+      - Application-level encryption
+      - Database-level encryption
+      - End-to-end encryption
+    criteria:
+      - Data sensitivity
+      - Compliance requirements
+      - Performance impact
+      - Key management complexity
+
+  - name: Security Monitoring Platform
+    description: Choose security monitoring and SIEM solution
+    options:
+      - AWS Security Hub + GuardDuty
+      - AWS CloudTrail + CloudWatch
+      - Third-party SIEM integration
+      - Custom security monitoring
+    criteria:
+      - Security monitoring requirements
+      - Compliance needs
+      - Cost considerations
+      - Integration capabilities
+
+success-criteria:
+  - Security architecture designed and documented
+  - Authentication and authorization implemented
+  - Data encryption implemented at rest and in transit
+  - Security monitoring and alerting configured
+  - Vulnerability scanning automated
+  - Security testing framework implemented
+  - Compliance requirements validated
+  - Security incident response procedures established
+  - Team trained on security practices
+  - Security documentation complete
+  - Regular security assessments scheduled
+  - Security metrics and KPIs defined

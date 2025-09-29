@@ -1,0 +1,132 @@
+# <!-- Powered by BMAD™ Core -->
+name: sustainability-assessment
+version: 1.0.0
+title: Sustainability Assessment & Implementation
+description: >-
+  Complete workflow for implementing sustainability best practices for Java applications
+  following AWS Well-Architected Framework Sustainability pillar. Covers environmental
+  impact assessment, green computing implementation, and carbon footprint reduction.
+phases:
+  - name: Sustainability Assessment
+    description: Assess current environmental impact and sustainability posture
+    tasks:
+      - environmental-impact-assessment
+      - carbon-footprint-baseline
+      - sustainability-metrics-definition
+      - green-computing-evaluation
+    agent: sustainability-engineer
+    deliverables:
+      - Environmental Impact Assessment
+      - Carbon Footprint Baseline
+      - Sustainability Metrics Definition
+      - Green Computing Evaluation Report
+
+  - name: Green Architecture Design
+    description: Design sustainable and energy-efficient architecture
+    tasks:
+      - sustainable-architecture-design
+      - energy-efficient-patterns
+      - renewable-energy-strategy
+      - resource-optimization-design
+    agent: java-architect
+    deliverables:
+      - Sustainable Architecture Design
+      - Energy-Efficient Patterns Implementation
+      - Renewable Energy Strategy
+      - Resource Optimization Design
+
+  - name: Green Computing Implementation
+    description: Implement green computing practices and optimizations
+    tasks:
+      - energy-efficient-coding
+      - resource-optimization-implementation
+      - sustainable-data-processing
+      - green-deployment-strategies
+    agent: spring-boot-developer
+    deliverables:
+      - Energy-Efficient Code Implementation
+      - Resource Optimization Configuration
+      - Sustainable Data Processing Setup
+      - Green Deployment Strategies
+
+  - name: Infrastructure Sustainability
+    description: Implement sustainable infrastructure practices
+    tasks:
+      - aws-sustainability-services
+      - carbon-aware-computing
+      - sustainable-storage-strategies
+      - green-networking-optimization
+    agent: aws-cloud-engineer
+    deliverables:
+      - AWS Sustainability Services Configuration
+      - Carbon-Aware Computing Setup
+      - Sustainable Storage Strategies
+      - Green Networking Optimization
+
+  - name: Sustainability Monitoring & Reporting
+    description: Implement sustainability monitoring and reporting
+    tasks:
+      - sustainability-metrics-monitoring
+      - carbon-footprint-tracking
+      - sustainability-reporting
+      - environmental-kpi-dashboard
+    agent: sustainability-engineer
+    deliverables:
+      - Sustainability Metrics Monitoring
+      - Carbon Footprint Tracking System
+      - Sustainability Reporting Framework
+      - Environmental KPI Dashboard
+
+decision-points:
+  - name: Renewable Energy Strategy
+    description: Choose renewable energy approach
+    options:
+      - AWS Carbon Neutral Regions
+      - AWS Clean Energy Regions
+      - Carbon Credits and Offsets
+      - On-premise Renewable Energy
+    criteria:
+      - Environmental impact goals
+      - Cost considerations
+      - Availability and reliability
+      - Compliance requirements
+
+  - name: Resource Optimization Strategy
+    description: Select resource optimization approach
+    options:
+      - Serverless Computing (Lambda/Fargate)
+      - ARM-based Instances (Graviton)
+      - Auto-scaling Optimization
+      - Resource Sharing and Consolidation
+    criteria:
+      - Performance requirements
+      - Cost optimization goals
+      - Environmental impact reduction
+      - Operational complexity
+
+  - name: Sustainability Monitoring Platform
+    description: Choose sustainability monitoring solution
+    options:
+      - AWS Customer Carbon Footprint Tool
+      - Third-party sustainability platforms
+      - Custom sustainability metrics
+      - Integrated monitoring solutions
+    criteria:
+      - Monitoring requirements
+      - Reporting capabilities
+      - Integration needs
+      - Cost considerations
+
+success-criteria:
+  - Environmental impact assessed and documented
+  - Carbon footprint baseline established
+  - Sustainable architecture designed and implemented
+  - Green computing practices implemented
+  - Energy-efficient code and patterns applied
+  - Sustainable infrastructure configured
+  - Carbon footprint monitoring implemented
+  - Sustainability metrics tracked and reported
+  - Team trained on sustainability practices
+  - Sustainability documentation complete
+  - Regular sustainability reviews scheduled
+  - Environmental KPIs defined and monitored

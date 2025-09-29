@@ -1,0 +1,29 @@
+# <!-- Powered by BMAD™ Core -->
+name: well-architected-team
+version: 1.0.0
+title: Well-Architected Framework Team
+description: >-
+  Specialized team of AI agents focused on implementing AWS Well-Architected Framework
+  principles for Java applications. Includes DevOps engineers, SRE engineers, cost
+  optimization engineers, and sustainability engineers working together to ensure
+  applications meet all six pillars of the Well-Architected Framework.
+agents:
+  - devops-engineer
+  - sre-engineer
+  - cost-optimization-engineer
+  - sustainability-engineer
+  - java-architect
+  - aws-cloud-engineer
+workflows:
+  # Well-Architected Pillar Workflows
+  - operational-excellence-setup
+  - security-assessment
+  - reliability-implementation
+  - cost-optimization-assessment
+  - sustainability-assessment
+  # Supporting Workflows
+  - java-web-project-greenfield
+  - java-api-project-greenfield
+  - java-microservice-greenfield
+  - cloud-migration
+default-agent: devops-engineer
