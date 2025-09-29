@@ -1,0 +1,130 @@
+# <!-- Powered by BMAD™ Core -->
+name: application-server-to-container
+version: 1.0.0
+title: Application Server to Container Migration
+description: >-
+  Complete workflow for migrating Java applications from traditional application
+  servers (WebLogic, JBoss, Tomcat) to containerized deployment using Docker
+  and AWS cloud platform. Covers containerization, orchestration, and cloud-native deployment.
+phases:
+  - name: Application Server Assessment
+    description: Analyze current application server and containerization requirements
+    tasks:
+      - application-server-analysis
+      - containerization-feasibility-assessment
+      - migration-strategy-planning
+      - aws-container-platform-selection
+    agent: java-architect
+    deliverables:
+      - Application Server Analysis Report
+      - Containerization Feasibility Assessment
+      - Migration Strategy Document
+      - AWS Container Platform Selection
+
+  - name: Application Modernization
+    description: Modernize application for containerized deployment
+    tasks:
+      - application-server-dependency-removal
+      - spring-boot-embedded-server-setup
+      - configuration-externalization
+      - stateless-application-preparation
+    agent: spring-boot-developer
+    deliverables:
+      - Application Server Dependencies Removed
+      - Spring Boot Embedded Server Setup
+      - Externalized Configuration
+      - Stateless Application Preparation
+
+  - name: Containerization
+    description: Create Docker containers for application deployment
+    tasks:
+      - dockerfile-creation
+      - docker-image-optimization
+      - multi-stage-build-setup
+      - container-security-hardening
+    agent: aws-cloud-engineer
+    deliverables:
+      - Dockerfile Configuration
+      - Optimized Docker Images
+      - Multi-stage Build Setup
+      - Container Security Configuration
+
+  - name: Orchestration Setup
+    description: Set up container orchestration and management
+    tasks:
+      - kubernetes-manifest-creation
+      - aws-eks-cluster-setup
+      - service-deployment-configuration
+      - load-balancing-setup
+    agent: aws-cloud-engineer
+    deliverables:
+      - Kubernetes Manifests
+      - AWS EKS Cluster Setup
+      - Service Deployment Configuration
+      - Load Balancing Setup
+
+  - name: Cloud Deployment
+    description: Deploy containerized application to AWS cloud
+    tasks:
+      - aws-container-registry-setup
+      - aws-deployment-automation
+      - monitoring-and-logging-setup
+      - backup-and-disaster-recovery
+    agent: aws-cloud-engineer
+    deliverables:
+      - AWS Container Registry Setup
+      - AWS Deployment Automation
+      - Monitoring and Logging Configuration
+      - Backup and Disaster Recovery Setup
+
+decision-points:
+  - name: Container Platform
+    description: Choose container orchestration platform
+    options:
+      - AWS EKS (Kubernetes)
+      - AWS ECS (Container Service)
+      - AWS Fargate (Serverless Containers)
+      - Docker Swarm
+    criteria:
+      - Application complexity
+      - Team expertise
+      - Cost considerations
+      - AWS integration preferences
+
+  - name: Application Server Migration
+    description: Select application server migration approach
+    options:
+      - Direct Spring Boot Migration
+      - Gradual Migration with Compatibility Layer
+      - Complete Rewrite
+      - Hybrid Approach
+    criteria:
+      - Application complexity
+      - Business continuity requirements
+      - Risk tolerance
+      - Available resources
+
+  - name: Deployment Strategy
+    description: Choose deployment strategy for containers
+    options:
+      - Blue-Green Deployment
+      - Rolling Deployment
+      - Canary Deployment
+      - A/B Testing Deployment
+    criteria:
+      - Application criticality
+      - Downtime tolerance
+      - Risk tolerance
+      - Monitoring capabilities
+
+success-criteria:
+  - Application successfully migrated from application server to containers
+  - Docker containers created and optimized
+  - Container orchestration platform configured
+  - Application deployed to AWS cloud platform
+  - Monitoring and logging configured
+  - Backup and disaster recovery implemented
+  - Performance maintained or improved
+  - Security requirements met
+  - Documentation updated with container procedures
+  - Team trained on container and cloud practices

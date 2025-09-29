@@ -1,0 +1,127 @@
+# <!-- Powered by BMAD™ Core -->
+name: build-system-modernization
+version: 1.0.0
+title: Build System Modernization
+description: >-
+  Complete workflow for modernizing Java project build systems to Maven.
+  Covers build system migration, dependency management, build automation,
+  and CI/CD integration for modern Java development practices.
+phases:
+  - name: Build System Assessment
+    description: Analyze current build system and Maven migration requirements
+    tasks:
+      - current-build-system-analysis
+      - maven-migration-planning
+      - dependency-mapping
+      - build-automation-assessment
+    agent: java-architect
+    deliverables:
+      - Current Build System Analysis
+      - Maven Migration Plan
+      - Dependency Mapping Document
+      - Build Automation Assessment
+
+  - name: Maven Project Setup
+    description: Initialize Maven project structure and configuration
+    tasks:
+      - maven-project-structure-setup
+      - pom-xml-configuration
+      - maven-plugin-configuration
+      - build-profile-setup
+    agent: spring-boot-developer
+    deliverables:
+      - Maven Project Structure
+      - POM.xml Configuration
+      - Maven Plugin Setup
+      - Build Profile Configuration
+
+  - name: Dependency Migration
+    description: Migrate dependencies to Maven dependency management
+    tasks:
+      - dependency-migration-to-maven
+      - maven-repository-configuration
+      - dependency-version-management
+      - transitive-dependency-resolution
+    agent: spring-boot-developer
+    deliverables:
+      - Maven Dependency Configuration
+      - Repository Configuration
+      - Dependency Version Management
+      - Transitive Dependency Resolution
+
+  - name: Build Automation
+    description: Implement Maven build automation and CI/CD integration
+    tasks:
+      - maven-build-automation
+      - ci-cd-pipeline-setup
+      - automated-testing-integration
+      - build-artifact-management
+    agent: spring-boot-developer
+    deliverables:
+      - Maven Build Automation
+      - CI/CD Pipeline Configuration
+      - Automated Testing Integration
+      - Build Artifact Management
+
+  - name: AWS Integration
+    description: Integrate Maven build with AWS services
+    tasks:
+      - aws-codebuild-integration
+      - aws-artifacts-storage
+      - aws-deployment-automation
+      - aws-monitoring-setup
+    agent: aws-cloud-engineer
+    deliverables:
+      - AWS CodeBuild Integration
+      - AWS Artifacts Storage
+      - AWS Deployment Automation
+      - AWS Monitoring Setup
+
+decision-points:
+  - name: Maven Version
+    description: Choose Maven version for migration
+    options:
+      - Maven 3.8.x (Stable)
+      - Maven 3.9.x (Latest Stable)
+      - Maven 3.10.x (Latest)
+    criteria:
+      - Java version compatibility
+      - Feature requirements
+      - Stability requirements
+      - Team expertise
+
+  - name: Repository Strategy
+    description: Select Maven repository approach
+    options:
+      - Maven Central Only
+      - Private Maven Repository
+      - AWS CodeArtifact
+      - Hybrid Repository Strategy
+    criteria:
+      - Dependency requirements
+      - Security requirements
+      - Cost considerations
+      - AWS integration preferences
+
+  - name: CI/CD Platform
+    description: Choose CI/CD platform for Maven integration
+    options:
+      - GitHub Actions
+      - AWS CodePipeline
+      - Jenkins
+      - GitLab CI
+    criteria:
+      - Platform preferences
+      - Integration requirements
+      - Cost considerations
+      - Team expertise
+
+success-criteria:
+  - Build system successfully migrated to Maven
+  - All dependencies managed through Maven
+  - Build automation working correctly
+  - CI/CD pipeline integrated with Maven
+  - AWS services integrated with Maven build
+  - Build performance optimized
+  - Documentation updated with Maven procedures
+  - Team trained on Maven best practices

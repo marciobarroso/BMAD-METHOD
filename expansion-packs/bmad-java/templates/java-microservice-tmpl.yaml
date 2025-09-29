@@ -1,0 +1,204 @@
+# <!-- Powered by BMAD™ Core -->
+name: java-microservice-tmpl
+version: 1.0.0
+title: Java Microservice Template
+description: >-
+  Comprehensive template for Java microservice projects using Java 21,
+  Spring Boot, Spring Cloud, Maven, and AWS cloud platform. Includes
+  microservice architecture, service discovery, and deployment templates.
+sections:
+  - name: Project Overview
+    description: Basic project information and configuration
+    fields:
+      - project-name: "Java Microservice"
+      - project-description: "Modern Java microservice with Spring Boot and Spring Cloud"
+      - java-version: "21"
+      - spring-boot-version: "3.2.x"
+      - spring-cloud-version: "2023.0.0"
+      - maven-version: "3.9.x"
+      - aws-region: "us-east-1"
+      - aws-environment: "dev"
+
+  - name: Project Structure
+    description: Maven project structure and organization
+    fields:
+      - group-id: "com.company.project"
+      - artifact-id: "java-microservice"
+      - version: "1.0.0"
+      - packaging: "jar"
+      - source-directory: "src/main/java"
+      - resources-directory: "src/main/resources"
+      - test-directory: "src/test/java"
+      - test-resources-directory: "src/test/resources"
+
+  - name: Dependencies
+    description: Maven dependencies and Spring Boot/Cloud starters
+    fields:
+      - spring-boot-starter-web: "Spring Boot Web Starter"
+      - spring-boot-starter-data-jpa: "Spring Boot Data JPA Starter"
+      - spring-boot-starter-security: "Spring Boot Security Starter"
+      - spring-boot-starter-test: "Spring Boot Test Starter"
+      - spring-boot-starter-actuator: "Spring Boot Actuator Starter"
+      - spring-cloud-starter-netflix-eureka-client: "Eureka Client"
+      - spring-cloud-starter-netflix-eureka-server: "Eureka Server"
+      - spring-cloud-starter-gateway: "Spring Cloud Gateway"
+      - spring-cloud-starter-config: "Spring Cloud Config"
+      - spring-cloud-starter-sleuth: "Spring Cloud Sleuth"
+      - resilience4j-spring-boot2: "Resilience4j Circuit Breaker"
+      - mysql-connector-java: "MySQL Connector"
+      - h2-database: "H2 Database (for testing)"
+
+  - name: Service Configuration
+    description: Microservice setup and configuration
+    fields:
+      - service-name: "java-microservice"
+      - service-port: "8080"
+      - service-discovery-url: "http://localhost:8761"
+      - config-server-url: "http://localhost:8888"
+      - api-gateway-url: "http://localhost:8080"
+      - circuit-breaker-enabled: "true"
+      - retry-enabled: "true"
+      - timeout-enabled: "true"
+
+  - name: Database Configuration
+    description: Database setup and configuration
+    fields:
+      - database-type: "MySQL"
+      - database-host: "localhost"
+      - database-port: "3306"
+      - database-name: "java_microservice"
+      - database-username: "microservice_user"
+      - database-password: "microservice_password"
+      - jpa-hibernate-ddl-auto: "update"
+      - jpa-show-sql: "true"
+
+  - name: Security Configuration
+    description: Microservice security setup and configuration
+    fields:
+      - security-strategy: "JWT Authentication"
+      - jwt-secret: "jwt-secret-key"
+      - jwt-expiration: "86400000"
+      - password-encoding: "BCrypt"
+      - service-to-service-auth: "JWT"
+      - cors-configuration: "Configured"
+      - security-headers: "Configured"
+
+  - name: AWS Configuration
+    description: AWS cloud platform configuration
+    fields:
+      - aws-region: "us-east-1"
+      - aws-vpc-id: "vpc-xxxxxxxxx"
+      - aws-subnet-ids: "subnet-xxxxxxxxx,subnet-yyyyyyyyy"
+      - aws-security-group: "sg-xxxxxxxxx"
+      - aws-eks-cluster: "java-microservice-cluster"
+      - aws-ecr-repository: "java-microservice"
+      - aws-rds-instance: "java-microservice-db"
+      - aws-cloudwatch-log-group: "java-microservice-logs"
+
+output-format: markdown
+template-structure: |
+  # Java Microservice: {{project-name}}
+
+  ## Project Overview
+  - **Project Name**: {{project-name}}
+  - **Description**: {{project-description}}
+  - **Java Version**: {{java-version}}
+  - **Spring Boot Version**: {{spring-boot-version}}
+  - **Spring Cloud Version**: {{spring-cloud-version}}
+  - **Maven Version**: {{maven-version}}
+  - **AWS Region**: {{aws-region}}
+  - **AWS Environment**: {{aws-environment}}
+
+  ## Project Structure
+  ```
+  {{artifact-id}}/
+  ├── src/
+  │   ├── main/
+  │   │   ├── java/
+  │   │   │   └── {{group-id}}/
+  │   │   │       ├── {{artifact-id}}/
+  │   │   │       │   ├── Application.java
+  │   │   │       │   ├── config/
+  │   │   │       │   ├── controller/
+  │   │   │       │   ├── service/
+  │   │   │       │   ├── repository/
+  │   │   │       │   ├── entity/
+  │   │   │       │   ├── dto/
+  │   │   │       │   ├── security/
+  │   │   │       │   ├── exception/
+  │   │   │       │   └── client/
+  │   │   │       └── resources/
+  │   │   │           ├── application.yml
+  │   │   │           ├── application-dev.yml
+  │   │   │           ├── application-prod.yml
+  │   │   │           └── bootstrap.yml
+  │   │   └── resources/
+  │   │       ├── application.yml
+  │   │       └── bootstrap.yml
+  │   └── test/
+  │       ├── java/
+  │       └── resources/
+  ├── pom.xml
+  ├── Dockerfile
+  ├── docker-compose.yml
+  ├── kubernetes/
+  │   ├── deployment.yaml
+  │   ├── service.yaml
+  │   ├── configmap.yaml
+  │   └── secret.yaml
+  └── README.md
+  ```
+
+  ## Dependencies
+  - **Spring Boot Web Starter**: {{spring-boot-starter-web}}
+  - **Spring Boot Data JPA Starter**: {{spring-boot-starter-data-jpa}}
+  - **Spring Boot Security Starter**: {{spring-boot-starter-security}}
+  - **Spring Boot Test Starter**: {{spring-boot-starter-test}}
+  - **Spring Boot Actuator Starter**: {{spring-boot-starter-actuator}}
+  - **Spring Cloud Eureka Client**: {{spring-cloud-starter-netflix-eureka-client}}
+  - **Spring Cloud Eureka Server**: {{spring-cloud-starter-netflix-eureka-server}}
+  - **Spring Cloud Gateway**: {{spring-cloud-starter-gateway}}
+  - **Spring Cloud Config**: {{spring-cloud-starter-config}}
+  - **Spring Cloud Sleuth**: {{spring-cloud-starter-sleuth}}
+  - **Resilience4j**: {{resilience4j-spring-boot2}}
+  - **MySQL Connector**: {{mysql-connector-java}}
+  - **H2 Database**: {{h2-database}}
+
+  ## Service Configuration
+  - **Service Name**: {{service-name}}
+  - **Service Port**: {{service-port}}
+  - **Service Discovery URL**: {{service-discovery-url}}
+  - **Config Server URL**: {{config-server-url}}
+  - **API Gateway URL**: {{api-gateway-url}}
+  - **Circuit Breaker Enabled**: {{circuit-breaker-enabled}}
+  - **Retry Enabled**: {{retry-enabled}}
+  - **Timeout Enabled**: {{timeout-enabled}}
+
+  ## Database Configuration
+  - **Database Type**: {{database-type}}
+  - **Host**: {{database-host}}
+  - **Port**: {{database-port}}
+  - **Database Name**: {{database-name}}
+  - **Username**: {{database-username}}
+  - **Password**: {{database-password}}
+  - **JPA Hibernate DDL Auto**: {{jpa-hibernate-ddl-auto}}
+  - **JPA Show SQL**: {{jpa-show-sql}}
+
+  ## Security Configuration
+  - **Security Strategy**: {{security-strategy}}
+  - **JWT Secret**: {{jwt-secret}}
+  - **JWT Expiration**: {{jwt-expiration}}
+  - **Password Encoding**: {{password-encoding}}
+  - **Service-to-Service Auth**: {{service-to-service-auth}}
+  - **CORS Configuration**: {{cors-configuration}}
+  - **Security Headers**: {{security-headers}}
+
+  ## AWS Configuration
+  - **AWS Region**: {{aws-region}}
+  - **VPC ID**: {{aws-vpc-id}}
+  - **Subnet IDs**: {{aws-subnet-ids}}
+  - **Security Group**: {{aws-security-group}}
+  - **EKS Cluster**: {{aws-eks-cluster}}
+  - **ECR Repository**: {{aws-ecr-repository}}
+  - **RDS Instance**: {{aws-rds-instance}}
+  - **CloudWatch Log Group**: {{aws-cloudwatch-log-group}}

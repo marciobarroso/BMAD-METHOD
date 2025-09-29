@@ -1,0 +1,127 @@
+# <!-- Powered by BMAD™ Core -->
+name: java-version-modernization
+version: 1.0.0
+title: Java Version Modernization
+description: >-
+  Complete workflow for modernizing Java applications from older versions to Java 21.
+  Covers version upgrade planning, dependency analysis, code modernization,
+  testing validation, and deployment for Java version migrations.
+phases:
+  - name: Version Assessment
+    description: Analyze current Java version and upgrade requirements
+    tasks:
+      - current-java-version-analysis
+      - target-java-21-assessment
+      - compatibility-analysis
+      - upgrade-impact-assessment
+    agent: java-architect
+    deliverables:
+      - Current Java Version Analysis
+      - Java 21 Compatibility Assessment
+      - Upgrade Impact Analysis
+      - Migration Strategy Document
+
+  - name: Dependency Modernization
+    description: Update dependencies for Java 21 compatibility
+    tasks:
+      - dependency-compatibility-check
+      - maven-dependency-update
+      - framework-version-upgrade
+      - security-vulnerability-assessment
+    agent: spring-boot-developer
+    deliverables:
+      - Dependency Compatibility Report
+      - Updated Maven Dependencies
+      - Framework Version Upgrades
+      - Security Assessment Report
+
+  - name: Code Modernization
+    description: Modernize code for Java 21 features and best practices
+    tasks:
+      - java-21-features-adoption
+      - deprecated-api-replacement
+      - code-pattern-modernization
+      - performance-optimization
+    agent: spring-boot-developer
+    deliverables:
+      - Java 21 Features Implementation
+      - Deprecated API Replacements
+      - Modernized Code Patterns
+      - Performance Optimizations
+
+  - name: Testing & Validation
+    description: Validate Java 21 upgrade with comprehensive testing
+    tasks:
+      - compatibility-testing
+      - performance-testing
+      - regression-testing
+      - security-validation
+    agent: spring-boot-developer
+    deliverables:
+      - Compatibility Test Results
+      - Performance Test Results
+      - Regression Test Results
+      - Security Validation Report
+
+  - name: AWS Deployment
+    description: Deploy modernized application to AWS with Java 21
+    tasks:
+      - aws-java-21-infrastructure
+      - containerization-update
+      - aws-deployment-validation
+      - monitoring-setup
+    agent: aws-cloud-engineer
+    deliverables:
+      - AWS Java 21 Infrastructure
+      - Updated Container Configuration
+      - AWS Deployment Validation
+      - Cloud Monitoring Setup
+
+decision-points:
+  - name: Java Version Target
+    description: Choose target Java version for upgrade
+    options:
+      - Java 17 (LTS - Conservative)
+      - Java 21 (LTS - Recommended)
+      - Java 23 (Latest Features)
+    criteria:
+      - Long-term support requirements
+      - Feature requirements
+      - Team expertise level
+      - Enterprise policies
+
+  - name: Migration Strategy
+    description: Select migration approach
+    options:
+      - Big Bang Migration
+      - Incremental Migration
+      - Parallel Run Strategy
+      - Blue-Green Deployment
+    criteria:
+      - Application complexity
+      - Business continuity requirements
+      - Risk tolerance
+      - Available resources
+
+  - name: Testing Approach
+    description: Choose testing strategy for validation
+    options:
+      - Comprehensive Test Suite
+      - Regression Testing Focus
+      - Performance Testing Priority
+      - User Acceptance Testing
+    criteria:
+      - Application criticality
+      - Available testing resources
+      - Quality requirements
+      - Time constraints
+
+success-criteria:
+  - Java application successfully upgraded to Java 21
+  - All dependencies updated and compatible
+  - Code modernized with Java 21 features
+  - Comprehensive testing completed
+  - Performance maintained or improved
+  - Security vulnerabilities addressed
+  - Application deployed to AWS successfully
+  - Documentation updated and complete

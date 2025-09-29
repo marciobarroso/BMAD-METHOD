@@ -1,0 +1,127 @@
+# <!-- Powered by BMAD™ Core -->
+name: java-web-project-greenfield
+version: 1.0.0
+title: Java Web Project - Greenfield
+description: >-
+  Complete workflow for creating new Java web applications from scratch using
+  Java 21, Spring Boot MVC, Maven, and AWS cloud platform. Covers project setup,
+  web development, security, database integration, and cloud deployment.
+phases:
+  - name: Project Planning
+    description: Define web application requirements and architecture
+    tasks:
+      - web-requirements-analysis
+      - ui-ux-planning
+      - database-design
+      - security-requirements
+    agent: java-architect
+    deliverables:
+      - Web Application Requirements
+      - UI/UX Design Plan
+      - Database Schema Design
+      - Security Requirements Document
+
+  - name: Project Setup
+    description: Initialize Java 21 web project with Spring Boot and Maven
+    tasks:
+      - maven-project-setup
+      - spring-boot-web-configuration
+      - java-21-configuration
+      - development-environment-setup
+    agent: spring-boot-developer
+    deliverables:
+      - Maven Project Structure
+      - Spring Boot Web Configuration
+      - Java 21 Project Setup
+      - Development Environment Guide
+
+  - name: Web Development
+    description: Implement web application with Spring Boot MVC
+    tasks:
+      - spring-mvc-implementation
+      - thymeleaf-templates
+      - static-resources-setup
+      - form-handling-implementation
+    agent: spring-boot-developer
+    deliverables:
+      - Spring MVC Controllers
+      - Thymeleaf Templates
+      - Static Resources
+      - Form Handling Implementation
+
+  - name: Security & Data
+    description: Implement security and data persistence
+    tasks:
+      - spring-security-setup
+      - spring-data-jpa-implementation
+      - database-integration
+      - authentication-authorization
+    agent: spring-boot-developer
+    deliverables:
+      - Spring Security Configuration
+      - Spring Data JPA Implementation
+      - Database Integration
+      - Authentication & Authorization
+
+  - name: AWS Deployment
+    description: Deploy web application to AWS cloud platform
+    tasks:
+      - aws-infrastructure-setup
+      - containerization-setup
+      - aws-deployment-configuration
+      - monitoring-setup
+    agent: aws-cloud-engineer
+    deliverables:
+      - AWS Infrastructure
+      - Docker Configuration
+      - AWS Deployment Setup
+      - Cloud Monitoring
+
+decision-points:
+  - name: Frontend Technology
+    description: Choose frontend technology approach
+    options:
+      - Thymeleaf (Server-side rendering)
+      - React with Spring Boot API
+      - Vue.js with Spring Boot API
+      - Angular with Spring Boot API
+    criteria:
+      - Team expertise
+      - Application complexity
+      - Performance requirements
+      - Development timeline
+
+  - name: Database Selection
+    description: Select database technology
+    options:
+      - PostgreSQL (Recommended)
+      - MySQL
+      - Amazon RDS
+      - Amazon Aurora
+    criteria:
+      - Data requirements
+      - Performance needs
+      - Cost considerations
+      - AWS integration
+
+  - name: Authentication Strategy
+    description: Choose authentication approach
+    options:
+      - Spring Security (Form-based)
+      - OAuth2 with Spring Security
+      - JWT with Spring Security
+      - AWS Cognito Integration
+    criteria:
+      - Security requirements
+      - User management needs
+      - Integration requirements
+      - Scalability needs
+
+success-criteria:
+  - Java 21 web application successfully created
+  - Spring Boot MVC application running locally
+  - Security and authentication implemented
+  - Database integration working
+  - Application deployed to AWS
+  - Monitoring and logging configured
+  - Documentation complete

@@ -1,0 +1,126 @@
+# <!-- Powered by BMAD™ Core -->
+name: java-version-upgrade-tmpl
+version: 1.0.0
+title: Java Version Upgrade Template
+description: >-
+  Comprehensive template for Java version upgrade projects from older versions
+  to Java 21. Includes upgrade planning, dependency analysis, code modernization,
+  and deployment templates.
+sections:
+  - name: Upgrade Overview
+    description: Basic upgrade information and configuration
+    fields:
+      - project-name: "Java Version Upgrade"
+      - current-java-version: "8"
+      - target-java-version: "21"
+      - upgrade-strategy: "Incremental Migration"
+      - upgrade-timeline: "3 months"
+      - risk-level: "Medium"
+      - rollback-plan: "Available"
+
+  - name: Current State Analysis
+    description: Current application state and dependencies
+    fields:
+      - application-type: "Web Application"
+      - framework-version: "Spring Boot 2.x"
+      - build-system: "Maven"
+      - database-type: "MySQL"
+      - application-server: "Tomcat"
+      - deployment-environment: "On-premise"
+      - team-size: "5 developers"
+
+  - name: Dependency Analysis
+    description: Dependencies and compatibility assessment
+    fields:
+      - total-dependencies: "25"
+      - incompatible-dependencies: "3"
+      - security-vulnerabilities: "5"
+      - deprecated-apis: "8"
+      - framework-upgrades-needed: "Spring Boot 2.x → 3.x"
+      - database-driver-upgrade: "Required"
+      - testing-framework-upgrade: "JUnit 4 → JUnit 5"
+
+  - name: Code Modernization
+    description: Code updates and modernization requirements
+    fields:
+      - java-21-features-adoption: "Pattern Matching, Records, Text Blocks"
+      - deprecated-api-replacement: "Required"
+      - performance-optimizations: "JVM tuning, GC optimization"
+      - security-improvements: "Updated security libraries"
+      - code-quality-improvements: "Modern Java patterns"
+      - testing-updates: "JUnit 5 migration"
+
+  - name: Testing Strategy
+    description: Testing approach and validation
+    fields:
+      - unit-testing: "JUnit 5 with comprehensive coverage"
+      - integration-testing: "Spring Boot Test with TestContainers"
+      - performance-testing: "JMH benchmarks and load testing"
+      - security-testing: "OWASP dependency check and security scan"
+      - compatibility-testing: "Cross-platform testing"
+      - regression-testing: "Full application testing"
+
+  - name: Deployment Strategy
+    description: Deployment approach and infrastructure
+    fields:
+      - deployment-approach: "Blue-Green Deployment"
+      - aws-infrastructure: "ECS with Fargate"
+      - containerization: "Docker with Java 21 base image"
+      - monitoring: "CloudWatch with custom metrics"
+      - rollback-strategy: "Automated rollback on failure"
+      - performance-monitoring: "APM with New Relic"
+
+output-format: markdown
+template-structure: |
+  # Java Version Upgrade: {{project-name}}
+
+  ## Upgrade Overview
+  - **Project Name**: {{project-name}}
+  - **Current Java Version**: {{current-java-version}}
+  - **Target Java Version**: {{target-java-version}}
+  - **Upgrade Strategy**: {{upgrade-strategy}}
+  - **Upgrade Timeline**: {{upgrade-timeline}}
+  - **Risk Level**: {{risk-level}}
+  - **Rollback Plan**: {{rollback-plan}}
+
+  ## Current State Analysis
+  - **Application Type**: {{application-type}}
+  - **Framework Version**: {{framework-version}}
+  - **Build System**: {{build-system}}
+  - **Database Type**: {{database-type}}
+  - **Application Server**: {{application-server}}
+  - **Deployment Environment**: {{deployment-environment}}
+  - **Team Size**: {{team-size}}
+
+  ## Dependency Analysis
+  - **Total Dependencies**: {{total-dependencies}}
+  - **Incompatible Dependencies**: {{incompatible-dependencies}}
+  - **Security Vulnerabilities**: {{security-vulnerabilities}}
+  - **Deprecated APIs**: {{deprecated-apis}}
+  - **Framework Upgrades Needed**: {{framework-upgrades-needed}}
+  - **Database Driver Upgrade**: {{database-driver-upgrade}}
+  - **Testing Framework Upgrade**: {{testing-framework-upgrade}}
+
+  ## Code Modernization
+  - **Java 21 Features Adoption**: {{java-21-features-adoption}}
+  - **Deprecated API Replacement**: {{deprecated-api-replacement}}
+  - **Performance Optimizations**: {{performance-optimizations}}
+  - **Security Improvements**: {{security-improvements}}
+  - **Code Quality Improvements**: {{code-quality-improvements}}
+  - **Testing Updates**: {{testing-updates}}
+
+  ## Testing Strategy
+  - **Unit Testing**: {{unit-testing}}
+  - **Integration Testing**: {{integration-testing}}
+  - **Performance Testing**: {{performance-testing}}
+  - **Security Testing**: {{security-testing}}
+  - **Compatibility Testing**: {{compatibility-testing}}
+  - **Regression Testing**: {{regression-testing}}
+
+  ## Deployment Strategy
+  - **Deployment Approach**: {{deployment-approach}}
+  - **AWS Infrastructure**: {{aws-infrastructure}}
+  - **Containerization**: {{containerization}}
+  - **Monitoring**: {{monitoring}}
+  - **Rollback Strategy**: {{rollback-strategy}}
+  - **Performance Monitoring**: {{performance-monitoring}}
