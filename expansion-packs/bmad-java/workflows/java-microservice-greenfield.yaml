@@ -1,0 +1,141 @@
+# <!-- Powered by BMAD™ Core -->
+name: java-microservice-greenfield
+version: 1.0.0
+title: Java Microservice Project - Greenfield
+description: >-
+  Complete workflow for creating new Java microservice applications from scratch using
+  Java 21, Spring Boot, Spring Cloud, Maven, and AWS cloud platform. Covers microservice
+  design, service communication, service discovery, and cloud-native deployment.
+phases:
+  - name: Microservice Planning
+    description: Define microservice architecture and design
+    tasks:
+      - microservice-requirements-analysis
+      - service-boundary-definition
+      - inter-service-communication-design
+      - data-ownership-planning
+    agent: java-architect
+    deliverables:
+      - Microservice Requirements Document
+      - Service Boundary Map
+      - Inter-Service Communication Design
+      - Data Ownership Matrix
+
+  - name: Infrastructure Setup
+    description: Set up microservice infrastructure and tooling
+    tasks:
+      - spring-cloud-setup
+      - service-discovery-configuration
+      - api-gateway-setup
+      - configuration-management-setup
+    agent: spring-boot-developer
+    deliverables:
+      - Spring Cloud Configuration
+      - Service Discovery Setup
+      - API Gateway Configuration
+      - Configuration Management Setup
+
+  - name: Microservice Development
+    description: Implement individual microservices
+    tasks:
+      - microservice-implementation
+      - rest-api-implementation
+      - data-persistence-setup
+      - business-logic-implementation
+    agent: spring-boot-developer
+    deliverables:
+      - Microservice Implementation
+      - REST API Implementation
+      - Data Persistence Layer
+      - Business Logic Implementation
+
+  - name: Service Integration
+    description: Implement inter-service communication and integration
+    tasks:
+      - service-communication-implementation
+      - circuit-breaker-setup
+      - load-balancing-configuration
+      - distributed-tracing-setup
+    agent: spring-boot-developer
+    deliverables:
+      - Service Communication Implementation
+      - Circuit Breaker Configuration
+      - Load Balancing Setup
+      - Distributed Tracing Configuration
+
+  - name: AWS Cloud Deployment
+    description: Deploy microservices to AWS cloud platform
+    tasks:
+      - aws-microservice-infrastructure
+      - containerization-setup
+      - aws-eks-setup
+      - service-mesh-configuration
+    agent: aws-cloud-engineer
+    deliverables:
+      - AWS Microservice Infrastructure
+      - Docker Configuration
+      - AWS EKS Setup
+      - Service Mesh Configuration
+
+decision-points:
+  - name: Service Communication Pattern
+    description: Choose inter-service communication approach
+    options:
+      - Synchronous REST APIs
+      - Asynchronous Message Queues (SQS/SNS)
+      - Event-Driven Architecture
+      - GraphQL Federation
+    criteria:
+      - Performance requirements
+      - Data consistency needs
+      - Team expertise
+      - AWS service integration
+
+  - name: Data Management Strategy
+    description: Select data management approach
+    options:
+      - Database per Service
+      - Shared Database (Anti-pattern)
+      - Event Sourcing
+      - CQRS Pattern
+    criteria:
+      - Data consistency requirements
+      - Service independence needs
+      - Team expertise
+      - Complexity tolerance
+
+  - name: Service Discovery
+    description: Choose service discovery mechanism
+    options:
+      - Spring Cloud Netflix Eureka
+      - AWS Service Discovery
+      - Kubernetes Service Discovery
+      - Consul Service Discovery
+    criteria:
+      - Platform choice
+      - Team expertise
+      - Operational complexity
+      - AWS integration preferences
+
+  - name: API Gateway
+    description: Select API gateway solution
+    options:
+      - Spring Cloud Gateway
+      - AWS API Gateway
+      - Kong API Gateway
+      - Zuul API Gateway
+    criteria:
+      - Feature requirements
+      - Performance needs
+      - Cost considerations
+      - AWS integration preferences
+
+success-criteria:
+  - Java 21 microservice architecture successfully implemented
+  - All microservices communicating properly
+  - Service discovery and API gateway configured
+  - Inter-service communication working
+  - Circuit breaker and resilience patterns implemented
+  - Microservices deployed to AWS EKS
+  - Monitoring and observability configured
+  - Documentation complete and accessible

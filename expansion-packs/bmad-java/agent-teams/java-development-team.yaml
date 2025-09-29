@@ -1,0 +1,24 @@
+# <!-- Powered by BMAD™ Core -->
+name: java-development-team
+version: 1.0.0
+title: Java Development Team
+description: >-
+  Specialized team of AI agents for modern Java development with Java 21,
+  Spring Boot ecosystem, Maven, and AWS cloud platform. Includes architects,
+  Spring Boot developers, and AWS cloud engineers working together to create
+  and modernize Java applications following modern best practices.
+agents:
+  - java-architect
+  - spring-boot-developer
+  - aws-cloud-engineer
+workflows:
+  # Greenfield Workflows
+  - java-web-project-greenfield
+  - java-api-project-greenfield
+  - java-microservice-greenfield
+  # Brownfield Workflows
+  - java-version-modernization
+  - build-system-modernization
+  - application-server-to-container
+  - cloud-migration
+default-agent: java-architect

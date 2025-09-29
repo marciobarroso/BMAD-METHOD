@@ -1,0 +1,128 @@
+# <!-- Powered by BMAD™ Core -->
+name: maven-migration-tmpl
+version: 1.0.0
+title: Maven Migration Template
+description: >-
+  Comprehensive template for Maven migration projects from older build systems
+  (Ant, Gradle, Ivy) to Maven. Includes migration planning, dependency management,
+  build automation, and CI/CD integration templates.
+sections:
+  - name: Migration Overview
+    description: Basic migration information and configuration
+    fields:
+      - project-name: "Maven Migration"
+      - current-build-system: "Ant"
+      - target-build-system: "Maven"
+      - migration-strategy: "Gradual Migration"
+      - migration-timeline: "2 months"
+      - risk-level: "Low"
+      - rollback-plan: "Available"
+
+  - name: Current Build System Analysis
+    description: Current build system state and configuration
+    fields:
+      - build-scripts: "build.xml"
+      - dependency-management: "Manual JAR management"
+      - build-profiles: "None"
+      - ci-cd-integration: "Jenkins with Ant"
+      - team-expertise: "Limited Maven experience"
+      - build-performance: "Slow builds"
+      - dependency-conflicts: "Manual resolution"
+
+  - name: Maven Configuration
+    description: Maven setup and configuration
+    fields:
+      - maven-version: "3.9.x"
+      - java-version: "21"
+      - group-id: "com.company.project"
+      - artifact-id: "maven-migration-project"
+      - version: "1.0.0"
+      - packaging: "jar"
+      - parent-pom: "Spring Boot Parent"
+
+  - name: Dependency Migration
+    description: Dependency management and migration
+    fields:
+      - total-dependencies: "30"
+      - maven-central-dependencies: "25"
+      - private-repository-dependencies: "5"
+      - dependency-conflicts: "2"
+      - transitive-dependencies: "150"
+      - dependency-scopes: "compile, test, provided"
+      - dependency-management: "BOM usage"
+
+  - name: Build Automation
+    description: Build automation and CI/CD integration
+    fields:
+      - maven-plugins: "Compiler, Surefire, Failsafe, Spring Boot"
+      - build-profiles: "dev, test, prod"
+      - ci-cd-platform: "Jenkins"
+      - build-triggers: "Git push, scheduled builds"
+      - artifact-publishing: "Nexus Repository"
+      - deployment-automation: "AWS CodeDeploy"
+
+  - name: AWS Integration
+    description: AWS services integration with Maven
+    fields:
+      - aws-codebuild: "Maven build configuration"
+      - aws-codepipeline: "Maven integration"
+      - aws-artifacts: "S3 artifact storage"
+      - aws-deployment: "ECS deployment"
+      - aws-monitoring: "CloudWatch integration"
+      - aws-security: "IAM roles and policies"
+
+output-format: markdown
+template-structure: |
+  # Maven Migration: {{project-name}}
+
+  ## Migration Overview
+  - **Project Name**: {{project-name}}
+  - **Current Build System**: {{current-build-system}}
+  - **Target Build System**: {{target-build-system}}
+  - **Migration Strategy**: {{migration-strategy}}
+  - **Migration Timeline**: {{migration-timeline}}
+  - **Risk Level**: {{risk-level}}
+  - **Rollback Plan**: {{rollback-plan}}
+
+  ## Current Build System Analysis
+  - **Build Scripts**: {{build-scripts}}
+  - **Dependency Management**: {{dependency-management}}
+  - **Build Profiles**: {{build-profiles}}
+  - **CI/CD Integration**: {{ci-cd-integration}}
+  - **Team Expertise**: {{team-expertise}}
+  - **Build Performance**: {{build-performance}}
+  - **Dependency Conflicts**: {{dependency-conflicts}}
+
+  ## Maven Configuration
+  - **Maven Version**: {{maven-version}}
+  - **Java Version**: {{java-version}}
+  - **Group ID**: {{group-id}}
+  - **Artifact ID**: {{artifact-id}}
+  - **Version**: {{version}}
+  - **Packaging**: {{packaging}}
+  - **Parent POM**: {{parent-pom}}
+
+  ## Dependency Migration
+  - **Total Dependencies**: {{total-dependencies}}
+  - **Maven Central Dependencies**: {{maven-central-dependencies}}
+  - **Private Repository Dependencies**: {{private-repository-dependencies}}
+  - **Dependency Conflicts**: {{dependency-conflicts}}
+  - **Transitive Dependencies**: {{transitive-dependencies}}
+  - **Dependency Scopes**: {{dependency-scopes}}
+  - **Dependency Management**: {{dependency-management}}
+
+  ## Build Automation
+  - **Maven Plugins**: {{maven-plugins}}
+  - **Build Profiles**: {{build-profiles}}
+  - **CI/CD Platform**: {{ci-cd-platform}}
+  - **Build Triggers**: {{build-triggers}}
+  - **Artifact Publishing**: {{artifact-publishing}}
+  - **Deployment Automation**: {{deployment-automation}}
+
+  ## AWS Integration
+  - **AWS CodeBuild**: {{aws-codebuild}}
+  - **AWS CodePipeline**: {{aws-codepipeline}}
+  - **AWS Artifacts**: {{aws-artifacts}}
+  - **AWS Deployment**: {{aws-deployment}}
+  - **AWS Monitoring**: {{aws-monitoring}}
+  - **AWS Security**: {{aws-security}}

@@ -1,0 +1,128 @@
+# <!-- Powered by BMAD™ Core -->
+name: aws-cloud-migration-tmpl
+version: 1.0.0
+title: AWS Cloud Migration Template
+description: >-
+  Comprehensive template for AWS cloud migration projects from on-premise
+  infrastructure to AWS cloud platform. Includes cloud architecture design,
+  infrastructure migration, application modernization, and deployment templates.
+sections:
+  - name: Cloud Migration Overview
+    description: Basic cloud migration information and configuration
+    fields:
+      - project-name: "AWS Cloud Migration"
+      - current-infrastructure: "On-premise Data Center"
+      - target-infrastructure: "AWS Cloud Platform"
+      - migration-strategy: "Replatform"
+      - migration-timeline: "6 months"
+      - risk-level: "High"
+      - rollback-plan: "Available"
+
+  - name: Current Infrastructure Analysis
+    description: Current infrastructure state and requirements
+    fields:
+      - infrastructure-type: "On-premise Data Center"
+      - server-count: "10 servers"
+      - database-servers: "2 MySQL servers"
+      - load-balancers: "Hardware load balancers"
+      - storage: "SAN storage"
+      - networking: "Corporate network"
+      - security: "Firewall and VPN"
+
+  - name: AWS Architecture Design
+    description: AWS cloud architecture and services
+    fields:
+      - aws-region: "us-east-1"
+      - aws-availability-zones: "3 AZs"
+      - compute-services: "ECS with Fargate"
+      - database-services: "RDS MySQL"
+      - storage-services: "S3 and EBS"
+      - networking-services: "VPC, ALB, CloudFront"
+      - security-services: "IAM, Security Groups, WAF"
+
+  - name: Application Modernization
+    description: Application updates for cloud deployment
+    fields:
+      - cloud-native-patterns: "12-factor app principles"
+      - configuration-management: "AWS Parameter Store"
+      - secrets-management: "AWS Secrets Manager"
+      - health-checks: "Spring Boot Actuator"
+      - metrics: "CloudWatch custom metrics"
+      - logging: "CloudWatch Logs"
+      - monitoring: "CloudWatch alarms"
+
+  - name: Data Migration
+    description: Database and data migration strategy
+    fields:
+      - database-migration: "AWS DMS for MySQL"
+      - data-backup: "Automated RDS backups"
+      - data-validation: "Data integrity checks"
+      - migration-testing: "Parallel run validation"
+      - rollback-strategy: "Database snapshots"
+      - performance-testing: "Load testing on RDS"
+
+  - name: Security and Compliance
+    description: Security implementation and compliance
+    fields:
+      - aws-security: "IAM roles, Security Groups, NACLs"
+      - application-security: "HTTPS, security headers"
+      - data-encryption: "Encryption at rest and in transit"
+      - access-control: "RBAC with AWS IAM"
+      - compliance: "SOC 2, GDPR compliance"
+      - security-monitoring: "CloudTrail, GuardDuty"
+
+output-format: markdown
+template-structure: |
+  # AWS Cloud Migration: {{project-name}}
+
+  ## Cloud Migration Overview
+  - **Project Name**: {{project-name}}
+  - **Current Infrastructure**: {{current-infrastructure}}
+  - **Target Infrastructure**: {{target-infrastructure}}
+  - **Migration Strategy**: {{migration-strategy}}
+  - **Migration Timeline**: {{migration-timeline}}
+  - **Risk Level**: {{risk-level}}
+  - **Rollback Plan**: {{rollback-plan}}
+
+  ## Current Infrastructure Analysis
+  - **Infrastructure Type**: {{infrastructure-type}}
+  - **Server Count**: {{server-count}}
+  - **Database Servers**: {{database-servers}}
+  - **Load Balancers**: {{load-balancers}}
+  - **Storage**: {{storage}}
+  - **Networking**: {{networking}}
+  - **Security**: {{security}}
+
+  ## AWS Architecture Design
+  - **AWS Region**: {{aws-region}}
+  - **AWS Availability Zones**: {{aws-availability-zones}}
+  - **Compute Services**: {{compute-services}}
+  - **Database Services**: {{database-services}}
+  - **Storage Services**: {{storage-services}}
+  - **Networking Services**: {{networking-services}}
+  - **Security Services**: {{security-services}}
+
+  ## Application Modernization
+  - **Cloud-Native Patterns**: {{cloud-native-patterns}}
+  - **Configuration Management**: {{configuration-management}}
+  - **Secrets Management**: {{secrets-management}}
+  - **Health Checks**: {{health-checks}}
+  - **Metrics**: {{metrics}}
+  - **Logging**: {{logging}}
+  - **Monitoring**: {{monitoring}}
+
+  ## Data Migration
+  - **Database Migration**: {{database-migration}}
+  - **Data Backup**: {{data-backup}}
+  - **Data Validation**: {{data-validation}}
+  - **Migration Testing**: {{migration-testing}}
+  - **Rollback Strategy**: {{rollback-strategy}}
+  - **Performance Testing**: {{performance-testing}}
+
+  ## Security and Compliance
+  - **AWS Security**: {{aws-security}}
+  - **Application Security**: {{application-security}}
+  - **Data Encryption**: {{data-encryption}}
+  - **Access Control**: {{access-control}}
+  - **Compliance**: {{compliance}}
+  - **Security Monitoring**: {{security-monitoring}}

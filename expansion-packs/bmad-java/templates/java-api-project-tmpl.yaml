@@ -1,0 +1,182 @@
+# <!-- Powered by BMAD™ Core -->
+name: java-api-project-tmpl
+version: 1.0.0
+title: Java API Project Template
+description: >-
+  Comprehensive template for Java REST API projects using Java 21,
+  Spring Boot Web, Maven, and AWS cloud platform. Includes API design,
+  documentation, and deployment templates.
+sections:
+  - name: Project Overview
+    description: Basic project information and configuration
+    fields:
+      - project-name: "Java REST API"
+      - project-description: "Modern Java REST API with Spring Boot Web"
+      - java-version: "21"
+      - spring-boot-version: "3.2.x"
+      - maven-version: "3.9.x"
+      - aws-region: "us-east-1"
+      - aws-environment: "dev"
+
+  - name: Project Structure
+    description: Maven project structure and organization
+    fields:
+      - group-id: "com.company.project"
+      - artifact-id: "java-api-app"
+      - version: "1.0.0"
+      - packaging: "jar"
+      - source-directory: "src/main/java"
+      - resources-directory: "src/main/resources"
+      - test-directory: "src/test/java"
+      - test-resources-directory: "src/test/resources"
+
+  - name: Dependencies
+    description: Maven dependencies and Spring Boot starters
+    fields:
+      - spring-boot-starter-web: "Spring Boot Web Starter"
+      - spring-boot-starter-data-jpa: "Spring Boot Data JPA Starter"
+      - spring-boot-starter-security: "Spring Boot Security Starter"
+      - spring-boot-starter-test: "Spring Boot Test Starter"
+      - spring-boot-starter-actuator: "Spring Boot Actuator Starter"
+      - springdoc-openapi: "OpenAPI 3 Documentation"
+      - springdoc-openapi-ui: "OpenAPI 3 UI"
+      - mysql-connector-java: "MySQL Connector"
+      - h2-database: "H2 Database (for testing)"
+
+  - name: API Configuration
+    description: REST API setup and configuration
+    fields:
+      - api-version: "v1"
+      - api-base-path: "/api/v1"
+      - api-documentation-path: "/swagger-ui.html"
+      - api-json-path: "/v3/api-docs"
+      - cors-origins: "http://localhost:3000"
+      - cors-methods: "GET,POST,PUT,DELETE,OPTIONS"
+      - cors-headers: "*"
+
+  - name: Database Configuration
+    description: Database setup and configuration
+    fields:
+      - database-type: "MySQL"
+      - database-host: "localhost"
+      - database-port: "3306"
+      - database-name: "java_api_app"
+      - database-username: "api_user"
+      - database-password: "api_password"
+      - jpa-hibernate-ddl-auto: "update"
+      - jpa-show-sql: "true"
+
+  - name: Security Configuration
+    description: API security setup and configuration
+    fields:
+      - security-strategy: "JWT Authentication"
+      - jwt-secret: "jwt-secret-key"
+      - jwt-expiration: "86400000"
+      - password-encoding: "BCrypt"
+      - cors-configuration: "Configured"
+      - security-headers: "Configured"
+
+  - name: AWS Configuration
+    description: AWS cloud platform configuration
+    fields:
+      - aws-region: "us-east-1"
+      - aws-vpc-id: "vpc-xxxxxxxxx"
+      - aws-subnet-ids: "subnet-xxxxxxxxx,subnet-yyyyyyyyy"
+      - aws-security-group: "sg-xxxxxxxxx"
+      - aws-rds-instance: "java-api-app-db"
+      - aws-api-gateway: "java-api-app-gateway"
+      - aws-cloudwatch-log-group: "java-api-app-logs"
+
+output-format: markdown
+template-structure: |
+  # Java API Project: {{project-name}}
+
+  ## Project Overview
+  - **Project Name**: {{project-name}}
+  - **Description**: {{project-description}}
+  - **Java Version**: {{java-version}}
+  - **Spring Boot Version**: {{spring-boot-version}}
+  - **Maven Version**: {{maven-version}}
+  - **AWS Region**: {{aws-region}}
+  - **AWS Environment**: {{aws-environment}}
+
+  ## Project Structure
+  ```
+  {{artifact-id}}/
+  ├── src/
+  │   ├── main/
+  │   │   ├── java/
+  │   │   │   └── {{group-id}}/
+  │   │   │       ├── {{artifact-id}}/
+  │   │   │       │   ├── Application.java
+  │   │   │       │   ├── config/
+  │   │   │       │   ├── controller/
+  │   │   │       │   ├── service/
+  │   │   │       │   ├── repository/
+  │   │   │       │   ├── entity/
+  │   │   │       │   ├── dto/
+  │   │   │       │   ├── security/
+  │   │   │       │   └── exception/
+  │   │   │       └── resources/
+  │   │   │           ├── application.yml
+  │   │   │           ├── application-dev.yml
+  │   │   │           ├── application-prod.yml
+  │   │   │           └── static/
+  │   │   └── resources/
+  │   │       ├── application.yml
+  │   │       └── static/
+  │   └── test/
+  │       ├── java/
+  │       └── resources/
+  ├── pom.xml
+  ├── Dockerfile
+  ├── docker-compose.yml
+  └── README.md
+  ```
+
+  ## Dependencies
+  - **Spring Boot Web Starter**: {{spring-boot-starter-web}}
+  - **Spring Boot Data JPA Starter**: {{spring-boot-starter-data-jpa}}
+  - **Spring Boot Security Starter**: {{spring-boot-starter-security}}
+  - **Spring Boot Test Starter**: {{spring-boot-starter-test}}
+  - **Spring Boot Actuator Starter**: {{spring-boot-starter-actuator}}
+  - **SpringDoc OpenAPI**: {{springdoc-openapi}}
+  - **SpringDoc OpenAPI UI**: {{springdoc-openapi-ui}}
+  - **MySQL Connector**: {{mysql-connector-java}}
+  - **H2 Database**: {{h2-database}}
+
+  ## API Configuration
+  - **API Version**: {{api-version}}
+  - **API Base Path**: {{api-base-path}}
+  - **API Documentation Path**: {{api-documentation-path}}
+  - **API JSON Path**: {{api-json-path}}
+  - **CORS Origins**: {{cors-origins}}
+  - **CORS Methods**: {{cors-methods}}
+  - **CORS Headers**: {{cors-headers}}
+
+  ## Database Configuration
+  - **Database Type**: {{database-type}}
+  - **Host**: {{database-host}}
+  - **Port**: {{database-port}}
+  - **Database Name**: {{database-name}}
+  - **Username**: {{database-username}}
+  - **Password**: {{database-password}}
+  - **JPA Hibernate DDL Auto**: {{jpa-hibernate-ddl-auto}}
+  - **JPA Show SQL**: {{jpa-show-sql}}
+
+  ## Security Configuration
+  - **Security Strategy**: {{security-strategy}}
+  - **JWT Secret**: {{jwt-secret}}
+  - **JWT Expiration**: {{jwt-expiration}}
+  - **Password Encoding**: {{password-encoding}}
+  - **CORS Configuration**: {{cors-configuration}}
+  - **Security Headers**: {{security-headers}}
+
+  ## AWS Configuration
+  - **AWS Region**: {{aws-region}}
+  - **VPC ID**: {{aws-vpc-id}}
+  - **Subnet IDs**: {{aws-subnet-ids}}
+  - **Security Group**: {{aws-security-group}}
+  - **RDS Instance**: {{aws-rds-instance}}
+  - **API Gateway**: {{aws-api-gateway}}
+  - **CloudWatch Log Group**: {{aws-cloudwatch-log-group}}

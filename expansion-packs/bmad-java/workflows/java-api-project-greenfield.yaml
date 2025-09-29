@@ -1,0 +1,142 @@
+# <!-- Powered by BMAD™ Core -->
+name: java-api-project-greenfield
+version: 1.0.0
+title: Java API Project - Greenfield
+description: >-
+  Complete workflow for creating new Java REST API applications from scratch using
+  Java 21, Spring Boot Web, Maven, and AWS cloud platform. Covers API design,
+  RESTful services, documentation, testing, and cloud deployment.
+phases:
+  - name: API Planning
+    description: Define REST API requirements and design
+    tasks:
+      - api-requirements-analysis
+      - rest-api-design
+      - data-model-design
+      - api-documentation-planning
+    agent: java-architect
+    deliverables:
+      - API Requirements Document
+      - REST API Design Specification
+      - Data Model Design
+      - API Documentation Plan
+
+  - name: Project Setup
+    description: Initialize Java 21 API project with Spring Boot Web and Maven
+    tasks:
+      - maven-project-setup
+      - spring-boot-web-configuration
+      - java-21-configuration
+      - api-project-structure
+    agent: spring-boot-developer
+    deliverables:
+      - Maven Project Structure
+      - Spring Boot Web Configuration
+      - Java 21 API Project Setup
+      - API Project Structure
+
+  - name: API Development
+    description: Implement REST API with Spring Boot Web
+    tasks:
+      - rest-controller-implementation
+      - request-response-models
+      - validation-implementation
+      - error-handling-setup
+    agent: spring-boot-developer
+    deliverables:
+      - REST Controllers
+      - Request/Response Models
+      - Validation Implementation
+      - Error Handling Setup
+
+  - name: Data & Security
+    description: Implement data persistence and API security
+    tasks:
+      - spring-data-jpa-implementation
+      - database-integration
+      - api-security-setup
+      - authentication-authorization
+    agent: spring-boot-developer
+    deliverables:
+      - Spring Data JPA Implementation
+      - Database Integration
+      - API Security Configuration
+      - Authentication & Authorization
+
+  - name: Documentation & Testing
+    description: Implement API documentation and testing
+    tasks:
+      - openapi-swagger-setup
+      - api-documentation-generation
+      - unit-testing-implementation
+      - integration-testing-setup
+    agent: spring-boot-developer
+    deliverables:
+      - OpenAPI/Swagger Documentation
+      - API Documentation
+      - Unit Test Suite
+      - Integration Test Suite
+
+  - name: AWS Deployment
+    description: Deploy API to AWS cloud platform
+    tasks:
+      - aws-infrastructure-setup
+      - containerization-setup
+      - aws-api-gateway-setup
+      - monitoring-setup
+    agent: aws-cloud-engineer
+    deliverables:
+      - AWS Infrastructure
+      - Docker Configuration
+      - AWS API Gateway Setup
+      - Cloud Monitoring
+
+decision-points:
+  - name: API Documentation
+    description: Choose API documentation approach
+    options:
+      - OpenAPI 3.0 with Swagger UI
+      - Spring REST Docs
+      - Manual Documentation
+      - AWS API Gateway Documentation
+    criteria:
+      - Documentation requirements
+      - Team preferences
+      - Integration needs
+      - Maintenance considerations
+
+  - name: Database Strategy
+    description: Select database approach
+    options:
+      - PostgreSQL with Spring Data JPA
+      - MySQL with Spring Data JPA
+      - Amazon RDS
+      - Amazon DynamoDB
+    criteria:
+      - Data requirements
+      - Performance needs
+      - Scalability requirements
+      - Cost considerations
+
+  - name: Authentication Method
+    description: Choose API authentication approach
+    options:
+      - JWT with Spring Security
+      - OAuth2 with Spring Security
+      - AWS Cognito Integration
+      - API Key Authentication
+    criteria:
+      - Security requirements
+      - Client integration needs
+      - Scalability requirements
+      - AWS integration preferences
+
+success-criteria:
+  - Java 21 REST API successfully created
+  - Spring Boot Web application running locally
+  - Complete API documentation generated
+  - Security and authentication implemented
+  - Database integration working
+  - Comprehensive test suite implemented
+  - API deployed to AWS with monitoring
+  - Documentation complete and accessible

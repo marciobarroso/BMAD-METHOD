@@ -1,0 +1,131 @@
+# <!-- Powered by BMAD™ Core -->
+name: cloud-migration
+version: 1.0.0
+title: Cloud Migration
+description: >-
+  Complete workflow for migrating Java applications to AWS cloud platform.
+  Covers cloud architecture design, infrastructure migration, application
+  modernization, and cloud-native deployment strategies.
+phases:
+  - name: Cloud Strategy Planning
+    description: Define cloud migration strategy and architecture
+    tasks:
+      - cloud-migration-assessment
+      - aws-architecture-design
+      - migration-strategy-planning
+      - cost-optimization-planning
+    agent: java-architect
+    deliverables:
+      - Cloud Migration Assessment
+      - AWS Architecture Design
+      - Migration Strategy Document
+      - Cost Optimization Plan
+
+  - name: Application Cloud Preparation
+    description: Prepare application for cloud deployment
+    tasks:
+      - cloud-native-patterns-implementation
+      - configuration-management-setup
+      - secrets-management-setup
+      - monitoring-instrumentation
+    agent: spring-boot-developer
+    deliverables:
+      - Cloud-Native Patterns Implementation
+      - Configuration Management Setup
+      - Secrets Management Configuration
+      - Monitoring Instrumentation
+
+  - name: AWS Infrastructure Setup
+    description: Set up AWS infrastructure and services
+    tasks:
+      - aws-infrastructure-provisioning
+      - aws-services-configuration
+      - networking-setup
+      - security-configuration
+    agent: aws-cloud-engineer
+    deliverables:
+      - AWS Infrastructure Provisioned
+      - AWS Services Configured
+      - Networking Setup
+      - Security Configuration
+
+  - name: Data Migration
+    description: Migrate data to AWS cloud services
+    tasks:
+      - data-migration-planning
+      - aws-database-setup
+      - data-migration-execution
+      - data-validation
+    agent: aws-cloud-engineer
+    deliverables:
+      - Data Migration Plan
+      - AWS Database Setup
+      - Data Migration Execution
+      - Data Validation Report
+
+  - name: Application Deployment
+    description: Deploy application to AWS cloud platform
+    tasks:
+      - aws-deployment-automation
+      - load-balancing-setup
+      - auto-scaling-configuration
+      - disaster-recovery-setup
+    agent: aws-cloud-engineer
+    deliverables:
+      - AWS Deployment Automation
+      - Load Balancing Configuration
+      - Auto-scaling Setup
+      - Disaster Recovery Configuration
+
+decision-points:
+  - name: AWS Database Service
+    description: Choose AWS database service
+    options:
+      - Amazon RDS (Relational)
+      - Amazon Aurora (MySQL/PostgreSQL)
+      - Amazon DynamoDB (NoSQL)
+      - Amazon DocumentDB (MongoDB)
+    criteria:
+      - Data requirements
+      - Performance needs
+      - Scalability requirements
+      - Cost considerations
+
+  - name: Compute Service
+    description: Select AWS compute service
+    options:
+      - Amazon EC2 (Virtual Machines)
+      - AWS Lambda (Serverless)
+      - Amazon ECS (Container Service)
+      - Amazon EKS (Kubernetes)
+    criteria:
+      - Application architecture
+      - Performance requirements
+      - Cost optimization
+      - Operational complexity
+
+  - name: Migration Strategy
+    description: Choose cloud migration approach
+    options:
+      - Lift and Shift (Rehost)
+      - Replatform (Lift and Reshape)
+      - Refactor (Cloud-Native)
+      - Hybrid Approach
+    criteria:
+      - Application complexity
+      - Business requirements
+      - Risk tolerance
+      - Available resources
+
+success-criteria:
+  - Application successfully migrated to AWS cloud
+  - AWS infrastructure properly configured
+  - Data migration completed successfully
+  - Application deployed and running on AWS
+  - Monitoring and observability configured
+  - Security and compliance requirements met
+  - Cost optimization implemented
+  - Disaster recovery and backup configured
+  - Performance maintained or improved
+  - Documentation updated with cloud procedures
+  - Team trained on AWS cloud practices

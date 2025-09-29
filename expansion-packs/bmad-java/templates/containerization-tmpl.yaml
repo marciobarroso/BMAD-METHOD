@@ -1,0 +1,132 @@
+# <!-- Powered by BMAD™ Core -->
+name: containerization-tmpl
+version: 1.0.0
+title: Containerization Template
+description: >-
+  Comprehensive template for containerization projects from application servers
+  to Docker containers and AWS cloud platform. Includes containerization planning,
+  Docker configuration, orchestration setup, and deployment templates.
+sections:
+  - name: Containerization Overview
+    description: Basic containerization information and configuration
+    fields:
+      - project-name: "Application Containerization"
+      - current-deployment: "WebLogic Application Server"
+      - target-deployment: "Docker Containers"
+      - containerization-strategy: "Spring Boot Embedded Server"
+      - containerization-timeline: "2 months"
+      - risk-level: "Medium"
+      - rollback-plan: "Available"
+
+  - name: Current Application Analysis
+    description: Current application state and server dependencies
+    fields:
+      - application-server: "WebLogic 12c"
+      - application-type: "Enterprise Java Application"
+      - server-dependencies: "WebLogic-specific configurations"
+      - deployment-model: "WAR file deployment"
+      - configuration-management: "Server-specific config"
+      - monitoring: "Server-based monitoring"
+      - team-expertise: "Limited container experience"
+
+  - name: Application Modernization
+    description: Application updates for containerization
+    fields:
+      - spring-boot-migration: "Spring Boot embedded server"
+      - configuration-externalization: "Environment-based config"
+      - stateless-design: "Session externalization"
+      - health-checks: "Spring Boot Actuator"
+      - metrics: "Micrometer integration"
+      - logging: "Structured logging"
+      - security: "Container security hardening"
+
+  - name: Docker Configuration
+    description: Docker setup and container configuration
+    fields:
+      - base-image: "OpenJDK 21 Alpine"
+      - dockerfile-strategy: "Multi-stage build"
+      - image-size: "Optimized for production"
+      - security-hardening: "Non-root user, read-only filesystem"
+      - health-checks: "Spring Boot Actuator endpoints"
+      - resource-limits: "CPU and memory limits"
+      - container-networking: "Bridge network"
+
+  - name: Orchestration Setup
+    description: Container orchestration and management
+    fields:
+      - orchestration-platform: "Kubernetes"
+      - deployment-strategy: "Rolling deployment"
+      - service-discovery: "Kubernetes services"
+      - load-balancing: "Kubernetes ingress"
+      - auto-scaling: "Horizontal Pod Autoscaler"
+      - config-management: "ConfigMaps and Secrets"
+      - persistent-storage: "PersistentVolumes"
+
+  - name: AWS Integration
+    description: AWS cloud platform integration
+    fields:
+      - aws-eks: "Kubernetes cluster"
+      - aws-ecr: "Container registry"
+      - aws-load-balancer: "Application Load Balancer"
+      - aws-rds: "Database service"
+      - aws-s3: "Object storage"
+      - aws-cloudwatch: "Monitoring and logging"
+      - aws-iam: "Security and access control"
+
+output-format: markdown
+template-structure: |
+  # Containerization: {{project-name}}
+
+  ## Containerization Overview
+  - **Project Name**: {{project-name}}
+  - **Current Deployment**: {{current-deployment}}
+  - **Target Deployment**: {{target-deployment}}
+  - **Containerization Strategy**: {{containerization-strategy}}
+  - **Containerization Timeline**: {{containerization-timeline}}
+  - **Risk Level**: {{risk-level}}
+  - **Rollback Plan**: {{rollback-plan}}
+
+  ## Current Application Analysis
+  - **Application Server**: {{application-server}}
+  - **Application Type**: {{application-type}}
+  - **Server Dependencies**: {{server-dependencies}}
+  - **Deployment Model**: {{deployment-model}}
+  - **Configuration Management**: {{configuration-management}}
+  - **Monitoring**: {{monitoring}}
+  - **Team Expertise**: {{team-expertise}}
+
+  ## Application Modernization
+  - **Spring Boot Migration**: {{spring-boot-migration}}
+  - **Configuration Externalization**: {{configuration-externalization}}
+  - **Stateless Design**: {{stateless-design}}
+  - **Health Checks**: {{health-checks}}
+  - **Metrics**: {{metrics}}
+  - **Logging**: {{logging}}
+  - **Security**: {{security}}
+
+  ## Docker Configuration
+  - **Base Image**: {{base-image}}
+  - **Dockerfile Strategy**: {{dockerfile-strategy}}
+  - **Image Size**: {{image-size}}
+  - **Security Hardening**: {{security-hardening}}
+  - **Health Checks**: {{health-checks}}
+  - **Resource Limits**: {{resource-limits}}
+  - **Container Networking**: {{container-networking}}
+
+  ## Orchestration Setup
+  - **Orchestration Platform**: {{orchestration-platform}}
+  - **Deployment Strategy**: {{deployment-strategy}}
+  - **Service Discovery**: {{service-discovery}}
+  - **Load Balancing**: {{load-balancing}}
+  - **Auto-scaling**: {{auto-scaling}}
+  - **Config Management**: {{config-management}}
+  - **Persistent Storage**: {{persistent-storage}}
+
+  ## AWS Integration
+  - **AWS EKS**: {{aws-eks}}
+  - **AWS ECR**: {{aws-ecr}}
+  - **AWS Load Balancer**: {{aws-load-balancer}}
+  - **AWS RDS**: {{aws-rds}}
+  - **AWS S3**: {{aws-s3}}
+  - **AWS CloudWatch**: {{aws-cloudwatch}}
+  - **AWS IAM**: {{aws-iam}}
