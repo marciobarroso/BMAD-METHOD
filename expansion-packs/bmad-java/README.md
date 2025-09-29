@@ -1,6 +1,6 @@
 # 🚀 BMAD Java Development Studio
 
-Um framework abrangente de desenvolvimento Java alimentado por IA para criar aplicações Java modernas e modernizar sistemas legados. Focado em Java 21, Spring Boot ecosystem, Maven, e plataforma AWS cloud.
+Um framework abrangente de desenvolvimento Java alimentado por IA, alinhado com o AWS Well-Architected Framework, para criar aplicações Java modernas e modernizar sistemas legados. Focado em Java 21, Spring Boot ecosystem, Maven, plataforma AWS cloud, e implementação completa dos seis pilares do Well-Architected Framework.
 
 ## 📋 Visão Geral
 
@@ -10,9 +10,13 @@ Este expansion pack fornece tudo que é necessário para desenvolvimento Java mo
 
 ### 🤖 Agentes Especializados em IA
 
-- **Java Architect** 🏗️ - Especialista em arquitetura Java 21, Spring Boot e AWS
+- **Java Architect** 🏗️ - Especialista em arquitetura Java 21, Spring Boot, AWS e Well-Architected Framework
 - **Spring Boot Developer** 🌱 - Desenvolvedor especializado em Spring Boot ecosystem
-- **AWS Cloud Engineer** ☁️ - Engenheiro especializado em AWS cloud platform
+- **AWS Cloud Engineer** ☁️ - Engenheiro especializado em AWS cloud platform e Well-Architected Framework
+- **DevOps Engineer** 🔄 - Especialista em CI/CD, automação e excelência operacional
+- **SRE Engineer** 🛡️ - Especialista em confiabilidade, observabilidade e engenharia de site reliability
+- **Cost Optimization Engineer** 💰 - Especialista em otimização de custos AWS
+- **Sustainability Engineer** 🌱 - Especialista em computação verde e sustentabilidade
 
 ### 🔄 Workflows de Desenvolvimento
 
@@ -28,6 +32,28 @@ Este expansion pack fornece tudo que é necessário para desenvolvimento Java mo
 - **Build System Modernization** - Migração para Maven como gestor de pacotes
 - **Application Server to Container** - Migração de WebLogic para containers
 - **Cloud Migration** - Migração para ambiente AWS distribuído
+
+#### 🏗️ Workflows Well-Architected Framework
+
+- **Operational Excellence Setup** - Implementação de excelência operacional com CI/CD, monitoramento e automação
+- **Security Assessment** - Avaliação e implementação de segurança seguindo o pilar Security
+- **Reliability Implementation** - Implementação de confiabilidade com SLI/SLO, alta disponibilidade e recuperação de desastres
+- **Cost Optimization Assessment** - Avaliação e otimização de custos AWS
+- **Sustainability Assessment** - Avaliação e implementação de práticas sustentáveis e computação verde
+
+## 👥 Agent Teams Disponíveis
+
+### 🏗️ Java Development Team
+
+Equipe completa para desenvolvimento Java com todos os agentes especializados.
+
+### 🎯 Well-Architected Team
+
+Equipe focada especificamente na implementação dos pilares do Well-Architected Framework.
+
+### 🏢 Enterprise Java Team
+
+Equipe enterprise-grade para desenvolvimento de aplicações Java de grande escala com conformidade completa ao Well-Architected Framework.
 
 ## 🛠️ Tech Stack Recomendado
 
@@ -233,9 +259,51 @@ bmad-java cloud-migration
 - **Solução**: `cloud-migration`
 - **Resultado**: Infraestrutura cloud escalável e otimizada
 
+## 🏗️ AWS Well-Architected Framework
+
+Este expansion pack implementa completamente os seis pilares do AWS Well-Architected Framework:
+
+### 🎯 Pilares Implementados
+
+1. **Operational Excellence** 🔄
+   - CI/CD pipelines automatizados
+   - Monitoramento e observabilidade abrangente
+   - Automação de processos operacionais
+   - Documentação e runbooks
+
+2. **Security** 🔒
+   - Defesa em profundidade
+   - Gerenciamento de identidade e acesso
+   - Proteção de dados e criptografia
+   - Monitoramento de segurança
+
+3. **Reliability** 🛡️
+   - SLI/SLO e error budgets
+   - Tolerância a falhas e resiliência
+   - Alta disponibilidade e recuperação de desastres
+   - Testes de caos e observabilidade
+
+4. **Performance Efficiency** ⚡
+   - Otimização de recursos e right-sizing
+   - Estratégias de cache e performance
+   - Monitoramento de performance
+   - Otimização de banco de dados
+
+5. **Cost Optimization** 💰
+   - Análise e monitoramento de custos
+   - Right-sizing e otimização de recursos
+   - Reserved instances e savings plans
+   - Arquitetura otimizada para custos
+
+6. **Sustainability** 🌱
+   - Computação verde e eficiência energética
+   - Arquitetura sustentável
+   - Monitoramento de pegada de carbono
+   - Otimização de recursos para sustentabilidade
+
 ## 🏷️ Versão
 
-**Versão Atual:** 1.0.0
+**Versão Atual:** 2.0.0
 
 **Compatibilidade:**
 
@@ -243,6 +311,7 @@ bmad-java cloud-migration
 - Spring Boot 3.x
 - Maven 3.9+
 - AWS Cloud Platform
+- AWS Well-Architected Framework
 
 ---
 

@@ -1,0 +1,132 @@
+# <!-- Powered by BMAD™ Core -->
+name: reliability-implementation
+version: 1.0.0
+title: Reliability Implementation
+description: >-
+  Complete workflow for implementing reliability best practices for Java applications
+  following AWS Well-Architected Framework Reliability pillar. Covers SLI/SLO definition,
+  fault tolerance, disaster recovery, and high availability implementation.
+phases:
+  - name: Reliability Planning
+    description: Define reliability requirements and design fault-tolerant architecture
+    tasks:
+      - reliability-requirements-analysis
+      - sli-slo-definition
+      - fault-tolerance-design
+      - disaster-recovery-planning
+    agent: sre-engineer
+    deliverables:
+      - Reliability Requirements Document
+      - SLI/SLO Definition
+      - Fault Tolerance Architecture
+      - Disaster Recovery Plan
+
+  - name: High Availability Implementation
+    description: Implement high availability patterns and redundancy
+    tasks:
+      - high-availability-architecture
+      - load-balancing-setup
+      - auto-scaling-configuration
+      - multi-az-deployment
+    agent: aws-cloud-engineer
+    deliverables:
+      - High Availability Architecture
+      - Load Balancing Configuration
+      - Auto-scaling Setup
+      - Multi-AZ Deployment
+
+  - name: Fault Tolerance & Resilience
+    description: Implement fault tolerance and resilience patterns
+    tasks:
+      - circuit-breaker-implementation
+      - retry-mechanisms-setup
+      - timeout-configuration
+      - graceful-degradation
+    agent: spring-boot-developer
+    deliverables:
+      - Circuit Breaker Implementation
+      - Retry Mechanisms Configuration
+      - Timeout Configuration
+      - Graceful Degradation Setup
+
+  - name: Disaster Recovery Setup
+    description: Implement disaster recovery and backup strategies
+    tasks:
+      - backup-strategy-implementation
+      - disaster-recovery-testing
+      - rto-rpo-definition
+      - failover-procedures
+    agent: aws-cloud-engineer
+    deliverables:
+      - Backup Strategy Implementation
+      - Disaster Recovery Testing Plan
+      - RTO/RPO Documentation
+      - Failover Procedures
+
+  - name: Monitoring & Observability
+    description: Implement reliability monitoring and observability
+    tasks:
+      - reliability-metrics-setup
+      - health-check-implementation
+      - chaos-engineering-setup
+      - incident-response-procedures
+    agent: sre-engineer
+    deliverables:
+      - Reliability Metrics Dashboard
+      - Health Check Implementation
+      - Chaos Engineering Framework
+      - Incident Response Procedures
+
+decision-points:
+  - name: High Availability Strategy
+    description: Choose high availability approach
+    options:
+      - Active-Passive (Standby)
+      - Active-Active (Multi-region)
+      - Blue-Green Deployment
+      - Canary Deployment
+    criteria:
+      - RTO/RPO requirements
+      - Cost considerations
+      - Complexity tolerance
+      - Data consistency needs
+
+  - name: Backup Strategy
+    description: Select backup and recovery approach
+    options:
+      - AWS RDS Automated Backups
+      - Cross-region replication
+      - Point-in-time recovery
+      - Snapshot-based backup
+    criteria:
+      - Recovery time requirements
+      - Data retention needs
+      - Cost considerations
+      - Compliance requirements
+
+  - name: Monitoring Strategy
+    description: Choose reliability monitoring approach
+    options:
+      - AWS CloudWatch + Custom Metrics
+      - Prometheus + Grafana
+      - Application Performance Monitoring
+      - Synthetic monitoring
+    criteria:
+      - Monitoring requirements
+      - Alerting needs
+      - Cost considerations
+      - Integration capabilities
+
+success-criteria:
+  - SLI/SLO defined and monitored
+  - High availability architecture implemented
+  - Fault tolerance patterns implemented
+  - Disaster recovery procedures tested
+  - Backup and recovery strategies validated
+  - Reliability monitoring and alerting configured
+  - Chaos engineering framework implemented
+  - Incident response procedures established
+  - Team trained on reliability procedures
+  - Documentation complete and accessible
+  - Regular reliability testing scheduled
+  - Reliability metrics and KPIs tracked

@@ -1,0 +1,130 @@
+# <!-- Powered by BMAD™ Core -->
+name: operational-excellence-setup
+version: 1.0.0
+title: Operational Excellence Setup
+description: >-
+  Complete workflow for implementing operational excellence for Java applications
+  following AWS Well-Architected Framework principles. Covers CI/CD pipeline setup,
+  monitoring, logging, alerting, automation, and operational procedures.
+phases:
+  - name: Operational Excellence Assessment
+    description: Assess current operational maturity and define improvement areas
+    tasks:
+      - operational-maturity-assessment
+      - ci-cd-readiness-assessment
+      - monitoring-gap-analysis
+      - automation-opportunities-identification
+    agent: devops-engineer
+    deliverables:
+      - Operational Maturity Assessment Report
+      - CI/CD Readiness Assessment
+      - Monitoring Gap Analysis
+      - Automation Opportunities Report
+
+  - name: CI/CD Pipeline Implementation
+    description: Implement comprehensive CI/CD pipeline with automation
+    tasks:
+      - ci-cd-pipeline-design
+      - build-automation-setup
+      - test-automation-implementation
+      - deployment-automation-setup
+    agent: devops-engineer
+    deliverables:
+      - CI/CD Pipeline Configuration
+      - Build Automation Setup
+      - Test Automation Framework
+      - Deployment Automation
+
+  - name: Monitoring & Observability Setup
+    description: Implement comprehensive monitoring and observability
+    tasks:
+      - monitoring-strategy-definition
+      - metrics-collection-setup
+      - logging-implementation
+      - distributed-tracing-setup
+    agent: sre-engineer
+    deliverables:
+      - Monitoring Strategy Document
+      - Metrics Collection Configuration
+      - Centralized Logging Setup
+      - Distributed Tracing Implementation
+
+  - name: Alerting & Incident Response
+    description: Set up alerting and incident response procedures
+    tasks:
+      - alerting-rules-definition
+      - incident-response-procedures
+      - runbook-creation
+      - escalation-procedures-setup
+    agent: sre-engineer
+    deliverables:
+      - Alerting Rules Configuration
+      - Incident Response Procedures
+      - Operational Runbooks
+      - Escalation Procedures
+
+  - name: Automation & Infrastructure as Code
+    description: Implement automation and infrastructure as code
+    tasks:
+      - infrastructure-as-code-setup
+      - configuration-management
+      - automated-provisioning
+      - operational-automation
+    agent: devops-engineer
+    deliverables:
+      - Infrastructure as Code Templates
+      - Configuration Management Setup
+      - Automated Provisioning Scripts
+      - Operational Automation Scripts
+
+decision-points:
+  - name: CI/CD Platform
+    description: Choose CI/CD platform and tools
+    options:
+      - AWS CodePipeline + CodeBuild + CodeDeploy
+      - GitHub Actions
+      - Jenkins with AWS plugins
+      - GitLab CI/CD
+    criteria:
+      - Team expertise
+      - Integration requirements
+      - Cost considerations
+      - Scalability needs
+
+  - name: Monitoring Platform
+    description: Select monitoring and observability platform
+    options:
+      - AWS CloudWatch + X-Ray
+      - Prometheus + Grafana
+      - DataDog
+      - New Relic
+    criteria:
+      - Monitoring requirements
+      - Cost considerations
+      - Integration capabilities
+      - Team expertise
+
+  - name: Alerting Strategy
+    description: Choose alerting and notification approach
+    options:
+      - AWS SNS + CloudWatch Alarms
+      - PagerDuty integration
+      - Slack/Teams notifications
+      - Email-based alerting
+    criteria:
+      - Incident response requirements
+      - Team preferences
+      - Integration capabilities
+      - Escalation needs
+
+success-criteria:
+  - CI/CD pipeline successfully implemented and tested
+  - Comprehensive monitoring and observability in place
+  - Alerting and incident response procedures established
+  - Infrastructure as code implemented
+  - Operational runbooks created and tested
+  - Automation reducing manual operational tasks
+  - Team trained on operational procedures
+  - Documentation complete and accessible
+  - Operational metrics and KPIs defined
+  - Continuous improvement process established
