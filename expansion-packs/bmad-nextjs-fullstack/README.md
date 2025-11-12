@@ -1,10 +1,10 @@
 # 🚀 BMAD Next.js Feature-Based Architecture Extension Pack
 
-A comprehensive AI-powered Next.js 15+ development framework using Feature-Based Architecture and Domain-Driven Design principles, built on the `marciobarroso/nextjs-new-app` template.
+A comprehensive AI-powered Next.js 16+ development framework using Feature-Based Architecture and Domain-Driven Design principles, built on the `marciobarroso/nextjs-new-app` template.
 
 ## 📋 Overview
 
-This extension pack provides everything needed to build enterprise-grade Next.js applications following Feature-Based Architecture patterns. Built specifically for the `nextjs-new-app` template, it includes specialized AI agents, Domain-Driven Design workflows, BaseController patterns, and schema-first development to accelerate your development process.
+This extension pack provides everything needed to build enterprise-grade Next.js applications following Feature-Based Architecture patterns. Built specifically for the `nextjs-new-app` template, it includes specialized AI agents, Domain-Driven Design workflows, BaseController patterns, and schema-first development to accelerate your development process. It fully embraces the template's use of **Prisma**, **NextAuth.js**, **shadcn/ui**, and **i18n**.
 
 ## ✨ Features
 
@@ -14,13 +14,14 @@ This extension pack provides everything needed to build enterprise-grade Next.js
 - **Next.js Architect** - Feature-Based Architecture and App Router patterns
 - **BaseController Specialist** - Database-agnostic controller patterns and schema-first design
 - **TypeScript Specialist** - Strict type safety and advanced TypeScript patterns
-- **Tailwind Designer** - Tailwind CSS 4.x design with utility-first approach
+- **Tailwind Designer** - Tailwind CSS design with utility-first approach, specialized in **shadcn/ui**.
 - **API Developer** - RESTful API design following BaseController patterns
-- **Database Specialist** - Database-agnostic integration (Prisma, MongoDB, etc.)
-- **Auth Specialist** - Authentication and authorization integration
+- **Database Specialist** - Database-agnostic integration (**Prisma** by default)
+- **Auth Specialist** - Authentication and authorization integration with **NextAuth.js**
+- **i18n Specialist** - Internationalization setup and management.
 - **Testing Engineer** - Feature-based testing strategies
 - **Deployment Specialist** - Production deployment for Feature-Based Architecture
-- **Performance Optimizer** - Next.js 15+ optimization and Core Web Vitals
+- **Performance Optimizer** - Next.js 16+ optimization and Core Web Vitals
 - **Security Auditor** - Security best practices for modern web applications
 
 ### 🔄 Domain-Driven Workflows
@@ -112,12 +113,20 @@ This extension pack implements Feature-Based Architecture with Domain-Driven Des
 
 ### Core Technologies (from nextjs-new-app template)
 
-- **Next.js 15.5.3** - React framework with App Router
-- **React 19.1.0** - Latest React with modern features
+- **Next.js 16.0.2** - React framework with App Router
+- **React 19.2.0** - Latest React with modern features
 - **TypeScript 5** - Strict type safety
-- **Tailwind CSS 4.1.13** - Modern utility-first CSS
+- **Tailwind CSS 4** - Modern utility-first CSS
 - **PostCSS 8.5.6** - CSS processing
 - **pnpm** - Efficient package management
+
+### Pre-configured Stack (from template)
+
+- **Prisma 6.19.0** - Modern ORM for database access.
+- **NextAuth.js 4.24.13** - Robust authentication.
+- **shadcn/ui** & **Radix UI** - For building a powerful component library.
+- **i18next** - For internationalization.
+- **Winston** - For logging.
 
 ### Development Tools (pre-configured)
 
@@ -164,23 +173,29 @@ This extension pack implements Feature-Based Architecture with Domain-Driven Des
 ```
 app/
 ├── (features)/              # Feature modules (Domain-Driven Design)
-│   ├── (user-management)/   # Business domain example
-│   │   ├── api/            # Backend API layer
-│   │   │   └── users/      # Entity-specific routes
-│   │   │       ├── [id]/   # Dynamic routes
-│   │   │       ├── controller.ts # BaseController extension
-│   │   │       ├── route.ts    # Collection operations
-│   │   │       └── schema.ts   # Zod schemas & types
-│   │   ├── components/     # Feature-specific UI
-│   │   ├── hooks/          # Custom React hooks
-│   │   ├── types/          # TypeScript definitions
-│   │   └── users/          # Feature pages
-│   └── (order-processing)/ # Another business domain
+│   ├── (auth)/            # Auth feature using NextAuth.js
+│   │   ├── api/
+│   │   ├── components/
+│   │   └── hooks/
+│   └── (user-management)/   # Business domain example
+│       ├── api/            # Backend API layer
+│       │   └── users/      # Entity-specific routes
+│       │       ├── [id]/   # Dynamic routes
+│       │       ├── controller.ts # BaseController extension
+│       │       ├── route.ts    # Collection operations
+│       │       └── schema.ts   # Zod schemas & types
+│       ├── components/     # Feature-specific UI
+│       ├── hooks/          # Custom React hooks
+│       ├── types/          # TypeScript definitions
+│       └── users/          # Feature pages
 ├── shared/                 # Shared infrastructure
-│   ├── components/ui/      # Reusable UI components
-│   ├── core/              # BaseController & patterns
-│   ├── lib/               # Utilities
-│   └── types/             # Shared types
+│   ├── components/
+│   │   ├── providers/      # Context providers (Auth, Theme, etc.)
+│   │   └── ui/             # Reusable UI components (shadcn/ui)
+│   ├── hooks/
+│   ├── lib/                # Utilities (i18n, prisma, logger)
+│   ├── locales/            # i18n translation files
+│   └── types/              # Shared types
 ├── globals.css            # Global styles
 ├── layout.tsx             # Root layout
 └── page.tsx               # Home page
@@ -207,11 +222,11 @@ This extension pack is part of the BMAD Method project and follows the same MIT 
 
 ## 🏷️ Version
 
-**Current Version:** 1.0.0
+**Current Version:** 1.0.1
 
 **Compatibility:**
 
-- Next.js 15+
+- Next.js 16+
 - Node.js 20.10.0+
 - TypeScript 5+
 

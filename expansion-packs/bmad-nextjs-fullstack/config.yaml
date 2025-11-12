@@ -1,12 +1,12 @@
 # <!-- Powered by BMAD™ Core -->
 name: bmad-nextjs-fullstack
-version: 1.0.0
+version: 1.0.1
 short-title: Next.js Feature-Based Architecture Studio
 description: >-
-  Comprehensive AI-powered Next.js 15+ fullstack development framework using Feature-Based
-  Architecture and Domain-Driven Design. Includes specialized agents for TypeScript, 
-  Tailwind CSS 4.x, schema-first development with Zod, BaseController patterns,
-  database-agnostic design, and enterprise-grade development workflows following
+  Comprehensive AI-powered Next.js 16+ fullstack development framework using Feature-Based
+  Architecture and Domain-Driven Design. Includes specialized agents for TypeScript,
+  Tailwind CSS, shadcn/ui, Prisma, NextAuth.js, i18n, schema-first development with Zod, 
+  BaseController patterns, and enterprise-grade development workflows following
   modern Next.js App Router conventions with Server/Client component patterns.
 author: marciobarroso
 slashPrefix: bmad-fba
